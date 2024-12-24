@@ -79,7 +79,8 @@ public class Employee {
             } else {
                 System.out.println("잘못된 형식의 숫자입니다.");
             }
-        } else {
+        }
+        else {
             // 기본 형식이 잘못된 경우
             System.out.println("잘못된 형식의 입력입니다. 010-XXXX-XXXX으로 입력해주세요.");
         }
@@ -94,7 +95,7 @@ public class Employee {
         this.boss = boss;
     }
 
-    public void info() {
+    public String info() {
         String output = "";
 
         output += String.format("[%s]\n",name);
@@ -102,5 +103,7 @@ public class Employee {
         output += String.format("직위 : %s\n",position);
         output += String.format("연락처 : %s\n",tel);
         output += String.format("직속상사 : %s\n",boss);
+
+        return output;
     }
 }
