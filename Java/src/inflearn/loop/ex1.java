@@ -1,4 +1,4 @@
-package loop;
+package inflearn.loop;
 
 public class ex1 {
     public static void main(String[] args) {

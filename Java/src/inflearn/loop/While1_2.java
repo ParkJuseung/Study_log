@@ -1,4 +1,4 @@
-package loop;
+package inflearn.loop;
 
 public class While1_2 {
     public static void main(String[] args) {

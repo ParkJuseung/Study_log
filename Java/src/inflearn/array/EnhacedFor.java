@@ -1,4 +1,4 @@
-package array;
+package inflearn.array;
 
 public class EnhacedFor {
     public static void main(String[] args) {

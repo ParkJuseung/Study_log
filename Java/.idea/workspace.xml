@@ -1,35 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d361a10b-7a30-47fb-8e84-19e83392fa95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Packer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Q100.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Q98.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hello-spring/src/main/resources/static/hello-static.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hello-spring/src/main/resources/templates/hello-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/array/Array1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/array/Array1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/array/EnhacedFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/array/EnhacedFor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/CondOp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/CondOp1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/CondOp2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/CondOp2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/Break1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/Break1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/Continue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/Continue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/DoWhile1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/DoWhile1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/While1_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/While1_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/While2_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/While2_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/While2_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/While2_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/ex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/ex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/ex1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/ex2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/ex2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/method/Method1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/method/Method1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/operator/Operator1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/operator/Operator1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/operator/Operator2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/operator/Operator2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/operator/OperatorAdd1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/operator/OperatorAdd1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/scope/Scope1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scope/Scope1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sist/question/classSection/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sist/question/classSection/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sist/question/classSection/Q104.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sist/question/classSection/Q104.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sist/question/classSection/Refrigerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sist/question/classSection/Refrigerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello-spring/src/main/java/hello/hello_spring/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/src/main/java/hello/hello_spring/controller/HelloController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ParkJuseung"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ParkJuseung/Study_log.git",
+    "accountId": "d8dda672-8746-49e0-bef3-d27266971065"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2ea5yKNRa4m1dASRISIt46btCqb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
-    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Q100.executor": "Run",
+    "Application.Q104.executor": "Run",
+    "Application.Q97.executor": "Run",
+    "Application.Q98.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/JS/Documents/Intelij/Study_log/Java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/JS/Documents/Intelij/Study_log/Java/src/Main.java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,6 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712130101697</updated>
       <workItem from="1712130102843" duration="1000" />
+      <workItem from="1735098028619" duration="12822000" />
     </task>
     <servers />
   </component>

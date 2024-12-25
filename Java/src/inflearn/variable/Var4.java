@@ -1,4 +1,4 @@
-package variable;
+package inflearn.variable;
 
 public class Var4 {
     public static void main(String[] args) {

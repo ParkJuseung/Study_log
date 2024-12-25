@@ -1,6 +1,4 @@
-package operator;
-
-import org.w3c.dom.ls.LSOutput;
+package inflearn.operator;
 
 public class Operator1 {
     public static void main(String[] args) {

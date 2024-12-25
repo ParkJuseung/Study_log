@@ -1,4 +1,4 @@
-package cond;
+package inflearn.cond;
 
 public class CondOp2 {
     public static void main(String[] args) {
