@@ -5,53 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d361a10b-7a30-47fb-8e84-19e83392fa95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Packer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Q100.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Q98.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sist/question/classSection/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hello-spring/src/main/resources/static/hello-static.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hello-spring/src/main/resources/templates/hello-template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/array/Array1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/array/Array1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/array/EnhacedFor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/array/EnhacedFor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/CondOp1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/CondOp1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/CondOp2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/CondOp2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/cond/Switch4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/cond/Switch4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/Break1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/Break1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/Continue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/Continue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/DoWhile1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/DoWhile1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/While1_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/While1_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/While2_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/While2_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/While2_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/While2_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/ex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/ex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/ex1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/loop/ex2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/loop/ex2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/method/Method1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/method/Method1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/operator/Operator1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/operator/Operator1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/operator/Operator2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/operator/Operator2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/operator/OperatorAdd1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/operator/OperatorAdd1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/poly/overrideing/Parent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/scanner/Scanner4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scanner/Scanner4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/scope/Scope1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/scope/Scope1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inflearn/variable/Var6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inflearn/variable/Var6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sist/question/classSection/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sist/question/classSection/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sist/question/classSection/Q104.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sist/question/classSection/Q104.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sist/question/classSection/Refrigerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sist/question/classSection/Refrigerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/gradlew" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hello-spring/src/main/java/hello/hello_spring/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/src/main/java/hello/hello_spring/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello-spring/src/main/resources/static/hello-static.html" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/src/main/resources/static/hello-static.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello-spring/src/main/resources/templates/hello-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring/src/main/resources/templates/hello-template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712130101697</updated>
       <workItem from="1712130102843" duration="1000" />
-      <workItem from="1735098028619" duration="12822000" />
+      <workItem from="1735098028619" duration="14186000" />
     </task>
     <servers />
   </component>
