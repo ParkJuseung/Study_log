@@ -14,9 +14,12 @@ public class Q114 {
 
         for(File f : files) {
             if(!set.containsKey(f.getName().split("\\.")[1])) {
-                set.put("." + f.getName().split("\\.")[1], 1);
+                set.put(f.getName().split("\\.")[1], 1);
+            }else {
+                set.put(f.getName().split("\\.")[1], set.get(f.getName().split("\\.")[1]) + 1);
             }
         }
+        System.out.println(set.toString());
 
 
 
