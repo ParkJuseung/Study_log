@@ -1,4 +1,4 @@
-package com.test.school.repository;
+package sist.fileProject.directory.src.com.test.school.repository;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

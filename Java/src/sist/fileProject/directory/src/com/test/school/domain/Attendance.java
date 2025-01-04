@@ -1,4 +1,4 @@
-package sist.directory.domain;
+package sist.fileProject.directory.src.com.test.school.domain;
 
 import java.util.Calendar;
 

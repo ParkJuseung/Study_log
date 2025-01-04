@@ -1,4 +1,10 @@
 package sist.question.fileDirectory;
 
-public class Q1113 {
+import java.util.*;
+
+
+public class Q113 {
+    public static void main(String[] args) {
+
+    }
 }

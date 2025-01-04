@@ -1,4 +1,4 @@
-package com.test.school.domain;
+package sist.fileProject.directory.src.com.test.school.domain;
 
 public class Score {
 	

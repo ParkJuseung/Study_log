@@ -3,20 +3,29 @@ package hello.hello_spring.service;
 import hello.hello_spring.controller.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     //회원가입
     public long join(Member member){
         //같은 이름이 있는 중복 회원 x
-        validateDuplicateMember(member); // 중복회원 검증
-        memberRepository.save(member);
-        return member.getId();
+            validateDuplicateMember(member); // 중복회원 검증
+            memberRepository.save(member);
+            return member.getId();
+
     }
 
     //중복회원 확인

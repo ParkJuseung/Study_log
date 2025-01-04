@@ -1,4 +1,4 @@
-package com.test.school.common;
+package sist.fileProject.directory.src.com.test.school.common;
 
 import java.util.List;
 
