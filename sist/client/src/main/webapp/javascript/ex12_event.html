@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Event</h1>
+
+    <form name = "form1">
+        <input type="text" name="txt1">
+        <input type="button" value="버튼" name="btn1"
+               onclick="m2();">
+        <input type="button" value="버튼" name="btn2"
+               onclick="window.document.form1.txt1.value=new Date();">
+        <input type="button" value="버튼" name="btn3">
+    </form>
+
+    <script>
+        function m2(){
+            window.document.form1.txt1.value = new Date();
+        }
+
+        window.document.form1.btn3.onclick = m3;
+
+        function m3(){
+            window.document.form1.txt1.value = new Date();
+        }
+    </script>
+</body>
+</html>

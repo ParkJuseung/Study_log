@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>이미지</h1>
+    <input type="button" value="버튼1" name="btn1">
+    <hr>
+    <img src="images/cat01.jpg" name="cat1">
+    <hr>
+    <img src="images/cat02.jpg" name="cat2">
+    <hr>
+    <img src="images/switch_on.png" name="switch_on">
+    <hr>
+    <img src="images/rect_icon01.png" name="icon1">
+    <hr>
+    <img src="images/dog01.jpg" name="dog1">
+    <hr>
+    <img src="images/0.png" name="num1">
+
+    <script>
+
+        document.all['btn1'].onclick = m1;
+        function m1(){
+            // document.images[0]
+            // document.images['cat1'].width = 500;
+            document.images['cat1'].src = 'images/cat02.jpg';
+
+        }
+
+        document.images['cat2'].onmouseover = m2;
+        document.images['cat2'].onmouseout = m3;
+        document.images['switch_on'].onclick = m4;
+        document.images['icon1'].onclick = m5;
+
+        function m2(){
+            document.images['cat2'].src = 'images/cat03.jpg';
+        }
+
+        function m3(){
+            document.images['cat2'].src = 'images/cat02.jpg';
+        }
+
+        function m4(){
+            if(document.images['switch_on'].src.endsWith('off.png') ){
+                document.images['switch_on'].src = 'images/switch_on.png';
+                document.body.bgColor = 'yellow';
+            }else {
+                document.images['switch_on'].src = 'images/switch_off.png';
+                document.body.bgColor = 'white';
+            }
+        }
+
+        let i = 0;
+        function m5(){
+            i++; // 이미지 파일명
+            if(i > 18){
+                return;
+            }
+
+            document.images['icon1'].src = 'images/rect_icon' + (i + '').padStart(2,'0') + '.png';
+        }
+
+
+        let no = 1;
+        window.onkeydown = m6;
+        function m6(){
+            if(no < 1){
+                no = 4;
+            }else if(no > 4){
+                no = 1;
+            }
+
+            if(event.keyCode === 39){
+                no++;
+                document.images['dog1'].src = 'images/dog0' + no + '.jpg';
+            }else if(event.keyCode === 37){
+                no--;
+                document.images['dog1'].src = 'images/dog0' + no + '.jpg';
+            }
+        }
+
+        window.onkeydown = m7;
+        function m7(){
+
+            // alert(event.key);
+            document.images['num1'].src = 'images/' + event.key + '.png';
+        }
+
+    </script>
+</body>
+</html>

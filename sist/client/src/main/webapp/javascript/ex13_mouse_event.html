@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        textarea, input{
+            display : block;
+            margin : 10px;
+            display : block;
+            margin-bottom : 10px;
+        }
+
+        textarea{
+            width : 500px;
+            height : 300px;
+            outline : none;
+            resize : none;
+            font-size : 14px;
+        }
+    </style>
+</head>
+<body>
+<form name = "form1">
+    <h1>마우스 관련 이벤트</h1>
+    <textarea name="txt1"></textarea>
+    <input type="button" value="버튼1" name="btn1">
+
+    <script>
+
+        var txt1 = window.document.form1.txt1;
+        var btn1 = window.document.form1.btn1;
+        //
+        // txt1.onmouseover = m1;
+        // txt1.onmouseout = m2;
+        txt1.onmousedown = m3;
+        // txt1.onmouseup = m4;
+        // txt1.onmousemove = m5;
+        txt1.onmousewheel = m6;
+
+        function m1(){
+            message('mouseover');
+            // window.document.body.bgColorolor = 'yellow';
+        }
+
+        function m2(){
+            message('mouseout');
+            // window.document.body.bgcolor = 'white';
+
+        }
+
+        function m3(){
+            // message('mousedown');
+            // message(event.buttons);
+
+            message(event.offsetX + ',' + event.offsetY);
+        }
+
+        function m4(){
+            message('mouseup');
+        }
+        function m5(){
+            message('mousemove');
+
+        }
+
+        function m6(){
+            message('mousewheel')
+        }
+
+
+        function message(txt){
+            var now = new Date();
+            txt1.value = now.toLocaleTimeString() + " > " + txt + '\r\n' + txt1.value;
+        }
+
+        btn1.onmouseover = m7;
+        btn1.onmousedown = m8;
+
+        function m7(){
+            message('버튼 + 마우스오버');
+        }
+
+        function m8(){
+            message('클릭')
+            //마우스 정보 / 키보드 정보 -> 모른다.
+        }
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset {
+            border: 1px solid #777;
+            width: 200px;
+        }
+
+        fieldset > label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #tbl1 {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        #tbl1 td {
+            border: 1px solid gray;
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>테이블 생성하기</h1>
+
+<fieldset>
+    <legend>행 x 열</legend>
+    <label>행 : <select id="selRow"></select></label>
+    <label>열 : <select id="selColumn"></select></label>
+    <input type="button" value="create" id="btn1">
+</fieldset>
+
+<table id="tbl1">
+</table>
+
+<script>
+    var selRow = document.getElementById('selRow');
+    var selColumn = document.getElementById('selColumn');
+    var btn1 = document.getElementById('btn1');
+    var tbl1 = document.getElementById('tbl1');
+
+    // 옵션 추가
+    for (var i = 1; i <= 10; i++) {
+        selRow.add(new Option(i, i));
+        selColumn.add(new Option(i, i));
+    }
+
+    // 버튼 클릭 시 테이블 생성
+    btn1.onclick = function () {
+        var temp = '';
+        var rows = parseInt(selRow.value);
+        var columns = parseInt(selColumn.value);
+
+        for (var i = 0; i < rows; i++) {
+            temp += '<tr>';
+            for (var j = 0; j < columns; j++) {
+                temp += '<td>';
+                temp += (i + ',' + j);
+                temp += '</td>';
+            }
+            temp += '</tr>';
+        }
+
+        // 테이블 갱신
+        tbl1.innerHTML = temp;
+    };
+</script>
+</body>
+</html>

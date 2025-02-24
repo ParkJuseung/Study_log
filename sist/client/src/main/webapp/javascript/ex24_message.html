@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>message box</h1>
+
+    <form name="form1">
+
+        <input type="button" value="버튼1" name="btn1">
+        <input type="button" value="버튼2" name="btn2">
+        <input type="button" value="버튼3" name="btn3">
+
+    </form>
+
+    <script>
+        document.form1.btn1.onclick = m1;
+        document.form1.btn2.onclick = m2;
+        document.form1.btn3.onclick = m3;
+
+        function m1(){
+            console.log(100);
+        }
+        function m2(){
+            let result = confirm('message');
+
+            if(result){
+                document.body.bgColor = 'blue';
+            }else{
+                document.body.bgColor = 'white';
+            }
+        }
+        function m3(){
+            let input = prompt('message');
+
+            console.log(input);
+        }
+    </script>
+</body>
+</html>

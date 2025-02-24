@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>location 객체</h1>
+    <form name="form1">
+        <input type="text" name="txt1">
+        <hr>
+        <input type="button" value="버튼1" name="btn1">
+    </form>
+
+    <script>
+        var txt1 =  window.document.form1.txt1;
+        var btn1 = window.document.form1.btn1;
+
+        btn1.onclick = m1;
+        function m1(){
+            // window.location.href =
+            // alert(window.location.href);
+            // window.location.href = 'https://www.naver.com'
+
+            // window.location.reload(); // 새로고침
+            // window.location.assign('https://www.navar.com')
+            // console.log(window.location.port);
+            // console.log(window.location.host);
+            // console.log(window.location.protocol);
+            // console.log(window.location.pathname);
+
+
+        }
+
+        window.onkeydown = m2;
+        function m2(){
+            if(event.keyCode === 70){
+                location.href = 'https://www.naver.com';
+            }else if(event.code == 'keyA'){
+                location.href = 'http://www.google.com';
+            }else if(event.code == 'keyQ'){
+                location.href = 'https://www.daum.net';
+            }a
+        }
+        //커뮤니티
+        //자유 알뜰 질문
+
+
+    </script>
+
+</body>
+</html>

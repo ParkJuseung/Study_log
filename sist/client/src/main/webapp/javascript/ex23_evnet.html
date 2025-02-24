@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item{
+            background-color: #EEE;
+            padding: 10px;
+            width : 300px;
+            text-align : center;
+            margin:15px;
+
+        }
+
+        .item > input{
+            border : 1px solid #CCC;
+            background-color : #fff;
+            width : 90px;
+            height : 50px;
+            margin : 3px;
+            outline: none;
+        }
+
+        .item > input:hover{
+            border : 1px solid gray;
+        }
+
+    </style>
+</head>
+<body>
+    <form name="form1">
+        <div class="item">
+
+            <input type="button" name="red" value="빨강" onclick="m1();">
+            <input type="button" name="yellow" value="노랑" onclick="m2();">
+            <input type="button" name="blue" value="파랑" onclick="m3();">
+
+        </div>
+        <!--    동적으로 만들기-->
+        <div class="item">
+
+            <input type="button" name="red1" value="빨강" onclick="m4();">
+            <input type="button" name="yellow2" value="노랑" onclick="m5();">
+            <input type="button" name="blue3" value="파랑" onclick="m6();">
+
+        </div>
+
+        <div class="item">
+
+            <input type="button" name="red" value="빨강" onclick="m7('tomato');">
+            <input type="button" name="yellow" value="노랑" onclick="m7('gold');">
+            <input type="button" name="blue" value="파랑" onclick="m7('blue');">
+
+        </div>
+
+        <div class="item">
+
+        <input type="button" name="redbtn" value="빨강" onclick="m8(this);">
+            <input type="button" name="yellowbtn" value="노랑" onclick="m8(this);">
+            <input type="button" name="bluebtn" value="파랑" onclick="m8(this);">
+
+        </div>
+
+        <div class="item">
+
+            <input type="button" name="redbtn" value="빨강" onclick="m9(this);" data-color="tomato">
+            <input type="button" name="yellowbtn" value="노랑" onclick="m9(this);" data-color="yellow">
+            <input type="button" name="bluebtn" value="파랑" onclick="m9(this);" data-color="blue">
+
+        </div>
+
+        <div class="item">
+
+            <input type="button" name="redbtn" value="빨강" onclick="m10();" data-color="tomato">
+            <input type="button" name="yellowbtn" value="노랑" onclick="m10();" data-color="yellow">
+            <input type="button" name="bluebtn" value="파랑" onclick="m10();" data-color="blue">
+
+        </div>
+
+        <div class="item">
+
+            <input type="button" name="redbtn7" value="빨강" data-color="tomato">
+            <input type="button" name="yellowbtn7" value="노랑" data-color="yellow">
+            <input type="button" name="bluebtn7" value="파랑" data-color="blue">
+
+        </div>
+
+        <div class="item">
+
+            <input type="button" name="redbtn9" value="빨강" data-color="tomato">
+            <input type="button" name="yellowbtn9" value="노랑" data-color="yellow">
+            <input type="button" name="bluebtn9" value="파랑" data-color="blue">
+
+        </div>
+    </form>
+    <script>
+
+        function m1(){
+            document.body.bgColor = 'tomato';
+        }
+
+        function m2(){
+            document.body.bgColor = 'yellow';
+        }
+
+        function m3(){
+            document.body.bgColor = 'blue';
+        }
+
+        function m4(){
+            document.body.bgColor = 'tomato';
+        }
+
+        function m5(){
+            document.body.bgColor = 'yellow';
+        }
+
+        function m6(){
+            document.body.bgColor = 'blue';
+        }
+
+        document.form1.red1.onClick = m4;
+        document.form1.yellow2.onClick = m5;
+        document.form1.blue3.onClick = m6;
+
+        function m7(color){
+            document.body.bgColor = color;
+        }
+
+        function m8(obj){
+            // console.log(obj);
+            document.body.bgColor = obj.name.replace('btn','');
+
+        }
+
+        function m9(obj){
+            document.body.bgColor = obj.getAttribute('data-color');
+        }
+
+        function m10(){
+            document.body.bgColor = event.target.getAttribute('data-color');
+        }
+
+        document.form1.redbtn7.onclick = m11;
+        document.form1.yellowbtn7.onclick = m11;
+        document.form1.bluebtn7.onclick = m11;
+
+        function m11(){
+            document.body.bgColor = event.target.getAttribute('data-color');
+        }
+
+        // document.form1.redbtn9.onmouseover = m12;
+        // document.form1.redbtn9.onmouseout = m13;
+
+        // function m12(){
+        //  document.body.bgColor = event.target.getAttribute('data-color');
+        // }
+        // function m13(){
+        //     document.body.bgColor = 'white';
+        // }
+
+        document.form1.redbtn9.onmouseover = m15;
+        document.form1.redbtn9.onmouseout = m15;
+        document.form1.yellowbtn9.onmouseover = m15;
+        document.form1.yellowbtn9.onmouseout = m15;
+        document.form1.bluebtn9.onmouseover = m15;
+        document.form1.bluebtn9.onmouseout = m15;
+
+        function m15(){
+            document.body.bgColor = event.target.getAttribute('data-color');
+        }
+    </script>
+
+</body>
+</html>

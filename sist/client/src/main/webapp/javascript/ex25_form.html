@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tbl1{
+            border : 1px solid gray;
+            border-collapse : collapse;
+            margin-bottom : 10px;
+        }
+
+        #tbl1 th, #tbl1 td{
+            border : 1px solid gray;
+            padding : 5px 10px;
+        }
+
+        #tbl1 th{
+            background-color : #eee;
+        }
+        input{
+            outline : none;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <form name = "form1" action="ex25_ok.jsp">
+
+        <table id="tbl1">
+            <tr>
+                <th>이름</th>
+                <td><input type="text" name="txtName" required></td>
+            </tr>
+            <tr>
+                <th>나이</th>
+                <td><input type="number" min="10" max="60" name="txtAge" required> </td>
+            </tr>
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" name="txtId"></td>
+            </tr>
+            <tr>
+                <th>암호</th>
+                <td><input type="password" name="txtPwd"></td>
+            </tr>
+            <tr>
+                <th>암호 확인</th>
+                <td><input type="password" name="txtPwdo"></td>
+            </tr>
+
+        </table>
+
+        <div>
+            <input type="submit" value="가입하기" name="btnRegister">
+            <input type="button" value="가입하기" name="btnRegister2">
+        </div>
+
+    </form>
+
+    <script>
+
+        var form1 = document.form1;
+        var txtName = form1.txtName;
+        var txtAge = form1.txtAge;
+        var txtId = form1.txtId;
+        var txtPwd = form1.txtPwd;
+        var txtPwdo = form1.txtPwdo;
+        var btnRegister = form1.btnRegister;
+        var btnRegister2 = form1.btnRegister2;
+
+        btnRegister.onclick= m1;
+        btnRegister2.onClick = m2;
+
+
+        function m1(){
+            // if(txtName.value.length === 0){
+            //     alert('이름 필수임');
+            //     // event.preventDefalut();
+            //     return false;
+            // }
+
+            // 이름
+            // 필수값
+            // 2~5자 이내
+            // 한글만
+            if(txtName.value.trim() == ''){
+                alert('이름 필수임');
+                txtName.focus();
+                // event.preventDefalut();
+                return false;
+            }
+
+            if(txtName.value.length < 2 || txtName.value.length > 5){
+                alert('2~5자 이내');
+                txtName.value='';
+                txtName.focus();
+                // txtName.select();
+                return false;
+            }
+
+            for(var i=0; i<txtName.value.length; i++){
+                var c = txtName.value.charAt(i);
+                if(c < '가' || c > '힣'){
+                    alert('한글만');
+                    txtName.select();
+                    return false;
+                }
+            }
+
+            //나이
+            //필수값
+            //숫자만 입력
+            //10~60
+            if(txtAge.value.trim() === ''){
+                alert('나이 필수임');
+                txtName.focus();
+                // event.preventDefalut();
+                return false;
+            }
+
+            if(isNaN(txtAge.value)){
+                alert('숫자만 입력');
+                txtAge.focus();
+                return false;
+            }
+
+            if(txtAge.value < 10 || txtAge.value > 60){
+                alert('10~60 사이');
+                txtAge.focus();
+                return false;
+            }
+
+            //아이디
+            //필수값
+            // 4~12
+            // 영어 + 숫자
+            // 숫자로는 시작 불가능
+            if(txtId.value.trim() === ''){
+                alert('아이디 필수');
+                txtId.focus();
+                return false;
+            }
+
+            if(txtId.value.length < 4 || txtId.value.length > 12){
+                alert('4~12자 이내');
+                txtId.focus();
+                return false;
+            }
+
+            for(vari=0; i<txtId.value.length; i++){
+                var c = txtId.value.charAt(i);
+                if((c < 'A' || c> 'Z') && (c < 'a' || c > 'z') && (c < '0' || c > '9') && c !=='_'){
+                    alert('영어 + 숫자');
+                    txtId.focus();
+                    return false;
+                }
+
+            }
+
+            // 암호
+            if(txtPwd.value !=txtPwdo.value){
+                alert('암호가 올바르지 않습니다.');
+                txtPwdo.value = '';
+                txtPwd.value = '';
+                txtPwd.focus();
+                return false;
+            }
+
+        }
+
+        function m2(){
+            if(txtName.value.length === 0){
+                alert('이름 필수임');
+                // event.preventDefalut();
+                return ;
+            }
+
+            form1.submit();
+        }
+    </script>
+</body>
+</html>

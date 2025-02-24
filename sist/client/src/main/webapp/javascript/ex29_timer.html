@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset{
+            border : 1px solid gray;
+            border-radius : 5px;
+            width : 200px;
+            margin-bottom : 15px;
+
+        }
+        fieldset input {
+            display : block;
+            margin-bottom : 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>타이머</h1>
+
+    <form name="form1">
+        <fieldset>
+            <legend>setTimeout</legend>
+            <input type="button" value="버튼1" name="btn1">
+            <input type="button" value="버튼2" name="btn2">
+            <input type="text" name="txt1">
+        </fieldset>
+        <fieldset>
+            <legend>setInterval</legend>
+            <input type="button" value="버튼3" name="btn3">
+            <input type="button" value="버튼4" name="btn4">
+            <input type="text" name="txt2">
+        </fieldset>
+        <fieldset>
+            <legend>타이머 통제하기</legend>
+            <input type="button" value="버튼5" name="btn5">
+            <input type="button" value="버튼6" name="btn6">
+            <input type="text" name="txt3">
+        </fieldset>
+
+    </form>
+
+    <script>
+        var txt1 = document.form1.txt1;
+        var txt2 = document.form1.txt2;
+        var txt3 = document.form1.txt3;
+
+        var btn1 = document.form1.btn1;
+        var btn2 = document.form1.btn2;
+        var btn3 = document.form1.btn3;
+        var btn4 = document.form1.btn4;
+        var btn5 = document.form1.btn5;
+        var btn6 = document.form1.btn6;
+
+
+        btn1.onclick = m1;
+        btn2.onclick = m2;
+        btn3.onclick = m3;
+        btn4.onclick = m4;
+        btn5.onclick = m5;
+        btn6.onclick = m6;
+
+
+        var n = 1;
+        var timer;
+        var timerList = [];
+
+
+        function m1(){
+            timer = setTimeout(f1, 5000);
+            // setInterval(f1, 1000);
+            console.log(timer);
+        }
+
+        function f1() {
+            // alert('따르릉');
+            txt1.value = n;
+            n++;
+            // m1();
+        }
+
+        function m2(){
+            clearTimeout(timer);
+        }
+
+        function m3(){
+            timer = setInterval(f3, 1000);
+        }
+
+        function f3(){
+            // alert('따르릉');
+            txt2.value = new Date().toLocaleTimeString();
+        }
+        function m4(){
+            clearInterval(timer);
+        }
+
+
+        // 시작버튼 1번만 누를 수 있게
+        // N회 중복 클릭 가능 + N회 종료 버튼 클릭 가능
+
+
+
+        function m5(){
+            timer = setInterval(f5, 100);
+            timerList.push(timer);
+        }
+
+        function f5(){
+            txt3.value = n;
+            n++;
+
+        }
+        function m6(){
+            // clearInterval(timer);
+            // timer = 0;
+
+            // clearInterval(timerList.pop());
+
+            for(var i =0; i<timerList.length; i++){
+                clearInterval(timerList[i]);
+            }
+        }
+
+        function m7(){
+            setInterval(f7, 1000);
+        }
+
+        fucntion f7(){
+            document.images[cat1].sr
+        }
+
+
+
+    </script>
+</body>
+</html>

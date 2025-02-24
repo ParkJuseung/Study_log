@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>라디오 버튼</h1>
+    <label>
+        <input type="radio" name="rb" value = "white" checked> 흰색
+    </label>    <label>
+        <input type="radio" name="rb" value = "yellow"> 노란색
+    </label>    <label>
+        <input type="radio" name="rb" value = "blue"> 파란색
+    </label>    <label>
+        <input type="radio" name="rb" value = "black"> 검정색
+    </label>    <label>
+        <input type="radio" name="rb" value = "pink"> 분홍색
+    </label>
+
+
+    <input type = "button" value = "빨간색" data-color = "red">
+
+    <script>
+
+        for(var i = 0; i<document.all.rb.length; i++){
+            document.all.rb[i].onclick = m1;
+        }
+
+        function m1(){
+            // alert(event.target.value);
+            document.body.bgColor = event.target.value;
+        }
+
+    </script>
+</body>
+</html>

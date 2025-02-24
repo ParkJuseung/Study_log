@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+    console.log(window.screen.width);
+    console.log(window.screen.height);
+
+
+    console.log(window.screen.availWidth);
+    console.log(window.screen.availHeight);
+
+    window.open('ex16_child.html', 'child', 'width=200, height=200, left=' + (window.screen.availWidth -200) + ' top=0');
+    console.log(window.screen.colorDepth);
+    console.log(window.screen.orientation);
+    </script>
+</body>
+</html>

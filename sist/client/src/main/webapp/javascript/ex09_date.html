@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        var now = new Date();
+        console.log(now);
+        console.log(now.toString());
+        console.log(typeof(now));
+
+        var now2 = new Date(2020,1,1);
+        console.log(now2);
+
+        //요소 추출
+        // - c.get(Calendar.상수)
+        console.log(now.getYear());
+        console.log(now.getFullYear());
+        console.log(now.getMonth());
+        console.log(now.getDate());
+        console.log(now.getDay());
+        console.log(now.getHours());
+        console.log(now.getMinutes());
+        console.log(now.getSeconds());
+        console.log(now.getMilliseconds());
+        console.log(now.getTime());
+
+        console.log(now.toDateString());
+        console.log(now.toTimeString());
+        console.log(now.toLocaleString());
+        console.log(now.toLocaleDateString());
+        console.log(now.toLocaleTimeString());
+
+        //특정 시각 만들기
+        var christmas = new Date();
+
+        christmas.setFullYear(2020, 11, 25);
+        christmas.setMonth(11);
+        christmas.setDate(25);
+        christmas.setHours(18);
+        christmas.setMinutes(0);
+        christmas.setSeconds(0);
+        christmas.setMilliseconds(0);
+        console.log(christmas);
+
+        var birthday = new Date(1994, 1, 20, 12, 30, 0);
+
+
+        // 시각 - 시각 = 시간
+        console.log(christmas - now);
+        console.log((christmas - now) / 1000 / 60 /60 /24);
+
+        // 시각 + 시간 = 시각
+        // 시각 - 시간 = 시각
+        c
+
+    </script>
+</body>
+</html>

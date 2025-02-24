@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .txts{
+            display : block;
+            margin-bottom : 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+
+    <form name="form1">
+
+        <h2 id="title">Controlls</h2>
+        <div>
+            <input type="text" name="txt1" id="txt1" class="txt">
+            <input type="text" name="txt2" id="txt2" class="txt">
+            <input type="text" name="txt3" id="txt3" class="txt">
+            <input type="button" value="버튼1" name="btn1">
+        </div>
+
+    </form>
+
+    <script>
+        // 1. BOM : 트리구조(고정된 트리) + 일부 태그 조작, 기능 부족
+        // 2. DOM : 트리구조, 모든 태그 조작, 기능 풍부
+
+        // document.form1.txt1.value = 'BOM';
+        // document.getElementById('txt1').value = 'DOM';
+
+        console.log(document.form1.txt1 === document.getElementById('txt1'));
+
+        var txts = document.getElementsByClassName('txts');
+        console.log(txts);
+
+        for(var i=0; i<txts.length; i++){
+            txts[i].value = i;
+        }
+
+        document.getElementsByName('txt1')[0].value = '홍길동';
+
+        var list = document.getElementsByTagName('input');
+        console.log(list.length)
+
+
+        for(var i=0; i<list.length; i++){
+            list[i].value = i;
+        }
+
+        document.querySelector('#txt1').value = 'CSS'
+        document.querySelector('.txt:nth-child(2)').value = 100;
+        document.querySelectorAll('.txt:nth-child(odd)').length;
+    </script>
+
+</body>
+</html>

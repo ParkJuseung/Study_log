@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form > *{
+            display : block;
+            margin : 10px;
+            outline : none;
+            padding : 5px;
+            resize : none;
+            /*width : 300px;*/
+        }
+
+        textarea{
+            /*height : 200px;*/
+        }
+
+        input[type=button]{
+            padding : 20px 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>키 이벤트</h1>
+
+    <form name = "form1">
+
+        <input type="text" name="txt1" size="10">
+        <input type="text" name="txt2">
+        <textarea name = "txt3"> </textarea>
+
+    </form>
+
+
+    <script>
+
+        var txt1 = window.document.form1.txt1;
+        var txt2 = window.document.form1.txt2;
+        var txt3 = window.document.form1.txt3;
+
+        txt1.onkeydown = m1;
+        txt1.onkeyup = m2;
+        txt1.onkeypress = m3;
+
+
+        function m1(){
+            //입력값 조작
+             txt2.value = txt1.value;
+
+        }
+
+        function m2(){
+            // txt2.value = txt1.value;
+            console.log(event.keyCode);
+            console.log(event.key);
+            console.log(event.code);
+        }
+
+        function m3(){
+            console.log('keypress');
+
+        }
+
+        btn1.onmouseover = m7;
+
+        function m7(){
+            message('버튼 + 마우스오버')
+        }
+
+    </script>
+</body>
+</html>

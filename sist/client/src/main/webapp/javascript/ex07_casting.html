@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex07_casting.html -->
+    <script>
+
+        /*  
+            
+            형변환 함수
+            1. number parseInt(value)
+                - value를 정수 형태를 가지는 number로 반환
+            2. number parseFloat(value)
+                - value를 실수 형태를 가지는 number로 반환
+
+        */
+        var n1 = 3.14;
+        console.log(parseInt(n1)); //3
+
+        var n2 = '200'; //'200' > 200
+        console.log(n2, typeof n2); //string
+        console.log(parseInt(n2), typeof parseInt(n2));
+
+        var n3 = '홍길동';
+        console.log(parseInt(n3)); //NaN
+
+        var n4 = '100점';
+        console.log(parseInt(n4)); //100
+        n4 = '100점이 아니라 90점입니다.';
+        console.log(parseInt(n4)); //100
+        n4 = '점수100';
+        console.log(parseInt(n4)); //NaN
+        
+        //CSS 조작
+        var width = '200px';
+        console.log(width + 100); //200px100
+        console.log(parseInt(width) + 100); //300
+
+        var size = '1.5rem';
+        console.log(parseInt(size)); //1
+        console.log(parseFloat(size)); //1.5
+
+        //boolean isNaN(value)
+        //- is not a number > value가 숫자가 아닙니까?
+
+        var age = '20세';  //키보드 입력
+
+        if (isNaN(age)) {
+            console.log('나이가 올바르지 않습니다.');
+        } else {
+            console.log('올바른 나이');
+        }
+
+    </script>
+
+
+</body>
+</html>
