@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        // window 객체
+        var a = 10; // 전역변수 -> 자동으로 윈도우 프로퍼티가 됨
+        window.b =20; // -> 윈도우 프로퍼티
+
+        function f1(){
+            alert('f1');
+        }
+
+
+        function f2(){// 전역함수
+            function f3(){ // 지역함수
+
+            }
+        }
+        console.log(window);
+
+        console.log(a);
+        console.log(window.a);
+
+        // f1();
+        // window.f1();
+
+        let d = 30;
+        const e = 40;
+
+        console.log(window);
+
+
+        const hong = {
+            name : '홍길동',
+            age : 20,
+            address:'서울시',
+            hello : function (){
+                console.log('안녕하세요.' + this.name + '입니다.')
+            }
+        }
+
+        //제어문 향상된 for문
+        for( let p in hong){
+            console.log(p);
+        }
+
+
+        // 배열 > 유사배열 (배열이 아님)
+        const arr = [100, 200, 300, 400, 500];
+        console.log(arr.length);
+
+        for(let p in arr){
+            console.log(p);
+        }
+
+
+
+    </script>
+</body>
+</html>

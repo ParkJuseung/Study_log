@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+
+        const list = ['사과', '귤', '바나나', '포도', '딸기', '파인애플', '배', '수박', '복숭아', '망고']
+        //탐색
+        for(let i = 0; i<list.length; i++){
+            console.log(list[i]);
+
+        }
+
+        for(let i in list){
+            console.log(list[i]);
+        }
+
+        list.forEach(function(item) {
+            console.log(item);
+        })
+
+        list.forEach(item => console.log(item));
+        list.forEach(((item, index) => console.log(item,index)))
+
+        //map()
+        // 가공 + 변환
+        console.log(list.map(item => item.length));
+
+        const names = ['홍길동', '아무개', '하하하'];
+
+        const olist = [];
+
+        for(let i = 0; i<names.length; i++){
+            const o = {
+                name:names[i],
+                age : 20,
+                address : '서울시'
+            }
+        }
+
+        console.log(olist);
+
+        const olist2 = names.map(name =>{
+            return {
+                name : name,
+                age : 20,
+                address : '서울시'
+            }
+        });
+
+        console.log(olist2);
+
+
+        //filter
+        console.log(list.filter(item => item.length > 3));
+
+        //find() - 요소 검색 / - 조건 제시 / 만족하는 첫번째 값 반환
+        console.log()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        //객체 생성
+        const o1 = new Object();
+        const now = new Date();
+        const arr = new Array();
+
+        //생성자 함수
+        // - 클래스 역할을 대신(template, scheme, 명세)
+        // - 자바의 생성자의 역할 -> 멤버 초기화
+
+
+        //생성자 함수
+        // 파스칼 표기법
+        // 일반함수 : 카멜케이스
+        function User(name, age){
+            this.name = name;
+            this.age = age;
+
+        }
+
+        // 생성자 함수는 올바르게 선언했지만 호출을 잘못함
+        // 생성자 함수는 그냥 부르면 안됨
+        //
+        // window.User('홍길동', 20);
+        // 생성자 함수는 만드시 new와 함께 사용
+        const hong = new User('홍길동', 20);
+
+    </script>
+</body>
+</html>

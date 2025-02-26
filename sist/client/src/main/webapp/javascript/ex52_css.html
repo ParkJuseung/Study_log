@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width : 150px;
+            height : 150px;
+            position : absolute;
+            left : 0;
+            top : 0;
+        }
+
+        #box1{
+            background-color: dodgerblue;
+        }
+        #box2{
+            background-color: gold;
+        }
+        #box3{
+            background-color: palevioletred;
+        }
+        #box4{
+            background-color: darkgreen;
+        }
+        #box5{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <div id="box4" class="box">상자4</div>
+    <div id="box5" class="box">상자5</div>
+
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        let currentIndex = 0;
+
+        // 클릭 시 상자의 위치 업데이트
+        window.onclick = (event) => {
+            updateBoxPosition(event.clientX, event.clientY);
+            currentIndex = (currentIndex + 1) % boxes.length;
+
+
+            const box = document.createElement('div');
+            let r = Math.random() * 256;
+            let g = Math.random() * 256;
+            let b = Math.random() * 256;
+            box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            document.body.append(box)
+        };
+
+        // 특정 좌표로 상자의 위치를 설정하는 함수
+        function updateBoxPosition(x, y) {
+            const box = boxes[currentIndex];
+            box.style.left = x - box.offsetWidth / 2 + 'px';
+            box.style.top = y - box.offsetHeight / 2 + 'px';
+            box.style.display = 'block'; // 상자가 보이도록 설정
+        }
+
+    </script>
+</body>
+</html>

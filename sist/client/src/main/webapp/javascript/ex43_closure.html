@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <script>
+        function outer(){
+            let a = 10;
+            console.log('a', a);
+
+            function inner(){
+                let b = 20;
+                console.log('b', b);
+            }
+            inner();
+        }
+        outer();
+
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        const hong = {
+            name : '홍길동',
+            age: 20
+        }
+        hong.age = 30;
+
+
+        let num1 = 30;
+        btn1.onclick = function(){
+            console.log('num1 : ' , num1);
+            let num2 = 200; // 지역변수
+            console.log('num2 : ', num2);
+
+            btn2.onclick = function (){
+                let num3 = 300; //지역 변수(btn2.onClick)
+                console.log('num3 : ', num3);
+                console.log('num2 : ', num2);
+
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>

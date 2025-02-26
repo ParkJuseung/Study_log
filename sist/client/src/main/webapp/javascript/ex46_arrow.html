@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+
+    <script>
+        // 화살표 함수
+        // 자바의 람다 : 인터페이스를 구현된 익명 객체의 추상메서드를 표현하는 기술
+        const f2 = function(){
+            console.log('f2');
+        }
+        f2();
+
+        //3. 익명 함수 -> 즉시 호출 -> 영역 관리용
+        (function(){
+            console.log('f3');
+        })()
+
+        //4. 익명 함수 -> 화살표 함수
+        const f4 = () =>{
+            console.log('f4');
+        }
+        f4();
+
+
+        const f5 = () => console.log('f5');
+
+        const f6 = () => console.log('f6');
+        const f7 = (num) => console.log(num);
+        const f8 = num => console.log(num);
+        const f9 = (a,b) => console.log(a,b);
+
+        //반환값
+        const f10 = () => {
+            return 100;}
+        const f11 = () => 100;
+        //
+        //
+        // document.getElementById('btn1').onclick = function(){
+        //     alert(event.target.id);
+        // }
+        //
+        // document.getElementById('btn2').onclick = () =>{
+        //     alert(event.target.id);
+        // }
+
+        // setTimeout(function () {
+        //     alert();
+        // }, 1000);
+        //
+
+        // setTimeout(() => {
+        //     alert();
+        // },1000)
+
+        document.getElementById('btn1').onclick = function(){
+            alert(this.value);
+        }
+
+        //화살표 함수는 어떤 상황에서도 this가 window를 참조
+        document.getElementById('btn2').onclick = () => alert(this);
+
+
+
+
+    </script>
+</body>
+</html>

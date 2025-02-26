@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width : 150px;
+            height : 150px;
+            position : absolute;
+            left : 0;
+            top : 0;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        //화면을 클릭하면 상자 생성 -> 클릭한 곳으로 이동
+        // 클릭 시 상자 생성 및 설정
+        window.onclick = function(event) {
+            createBoxAtPosition(event.clientX, event.clientY);
+        };
+
+        // 상자를 생성하고 지정된 위치로 이동시키는 함수
+        function createBoxAtPosition(x, y) {
+            const box = document.createElement('div');
+            box.className = 'box';
+
+            // 랜덤한 색상 생성
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+            // 클릭한 위치로 상자 이동
+            box.style.left = x - 75 + 'px'; // 중심 정렬을 위해 box 크기 절반만큼 보정
+            box.style.top = y - 75 + 'px';
+            document.body.appendChild(box);
+        }
+    </script>
+</body>
+</html>

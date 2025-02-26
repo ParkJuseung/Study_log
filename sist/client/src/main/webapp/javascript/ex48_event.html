@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{padding :  50px}
+        #p1 {
+            background-color: tomato;
+        }
+        #p2 {
+            background-color: gold;
+        }
+        #p3 {
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="p1" class="box">
+        <div id="p2" class="box">
+            <div id="p3" class="box"></div>
+        </div>
+    </div>
+
+    <input type="text" id="txt1">
+
+    <script>
+        // 자바스크립트는 기본적으로 이벤트 버블링(?)을 지원
+        // 이벤트 버블링 :
+        // 이벤트 터널링 : DOM으로만 구현 가능
+        // 이벤트 캡쳐링 :
+
+        const p1 = document.getElementById('p1')
+        const p2 = document.getElementById('p2')
+        const p3 = document.getElementById('p3')
+
+        // p1.onclick = function(){
+        //     alert('토마토');
+        // }
+        //
+        // p2.onclick = function(){
+        //     alert('골드')
+        // }
+        //
+        // p3.onclick = function(event){
+        //     alert('파랑')
+        //     event.stopPropagation(); // 표준
+        //
+        // }
+
+
+
+        p1.addEventListener('click', function(){
+            alert('빨');
+            event.stopPropagation();
+        },true)
+
+        p2.addEventListener('click', function(){
+            alert('노');
+        },true)
+
+        p3.addEventListener('click', function(){
+            alert('파');
+        },true)
+
+        // p1.addEventListener('click', function(){
+        //     alert('빨');
+        // })
+        //
+        // p2.addEventListener('click', function(){
+        //     alert('노');
+        // })
+        //
+        // p3.addEventListener('click', function(){
+        //     alert('파');
+        // })
+
+        document.getElementById('txt1').onkeydown = function(){
+            if(event.keyCode >=48 && event.keyCode <= 57){
+                alert('숫자');
+                event.stopPropagation();
+            }
+        }
+
+        window.onkeydown = function(){
+            if(event.keyCode === 51){
+                location.href = 'https://naver.com'
+            }
+        }
+    </script>
+</body>
+</html>

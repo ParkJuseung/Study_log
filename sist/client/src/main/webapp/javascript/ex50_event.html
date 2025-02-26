@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tbl1{
+            border : 1px solid black;
+            border-collapse: collapse ;
+        }
+
+        #tbl1 td{
+            border : 1px solid black;
+            /*padding : 10px 20px;*/
+            width : 126px;
+            height : 126px;
+            font-size : 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>테이블</h1>
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <input type="text" id="txt1">
+
+    <hr>
+
+    <input type="button" value="버튼1" id="btn1">
+
+    <hr>
+
+    <a href="https://naver.com" id="link1">네이버</a>
+
+
+    <script>
+        document.querySelectorAll('#tbl1 td').forEach(td =>{
+            td.onmousedown = function(){
+
+                let fileName = '';
+                if(event.buttons === 1){
+                    fileName = 'images/rect_icon01.png'
+                }else if(event.buttons === 2){
+                    fileName = 'images/rect_icon02.png'
+                }else if (event.buttons === 4) {
+                    //태그 삭제
+                    // alert(event.currentTarget.nodeName);
+                    event.currentTarget.removeChild(event.target);
+                }
+
+                if(event.buttons !== 4){
+
+                    const img = document.createElement('img');
+                    img.setAttribute('src', fileName);
+                    event.target.appendChild(img);
+
+                }
+            }
+        });
+
+        window.oncontextmenu = function(){
+            return false;
+        }
+
+        document.getElementById('txt1').onkeydown = function(){
+            return false;
+        }
+        document.getElementById('btn1').onclick = function(){
+
+        }
+        document.getElementById('link1').onclick = function(){
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

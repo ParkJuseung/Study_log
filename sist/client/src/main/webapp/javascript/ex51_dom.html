@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin : 100px;
+        }
+
+        #box1 {
+            border : 1px solid black;
+            width : 200px;
+            height : 200px;
+
+        }
+
+        .one{font-size : 5rem;}
+        .two{color : orange}
+        .three{text-decoration: underline}
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+
+    <input type="button" value="버튼1" id="btn1"/>
+    <input type="button" value="버튼2" id="btn2"/>
+
+    <hr>
+
+    <div id="box1">상자</div>
+
+
+
+    <h1>News</h1>
+
+    <div class="tool">
+        <button type="button" id="btn3">+</button>
+        <button type="button" id="btn4">-</button>
+    </div>
+
+    <p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aperiam, doloribus eaque est, id incidunt ipsa ipsum iste maiores minus
+        molestias natus quam repellat repudiandae, rerum sint tenetur ut veniam
+        veritatis! A aut debitis dolore doloribus dolorum ex explicabo fugiat fugit
+        illum inventore iure molestias, nihil officiis praesentium quisquam ratione
+        totam. A accusantium, consequatur cumque dignissimos ducimus, error ipsa natus
+        nobis officia pariatur provident, sed sint sunt veniam veritatis. Autem blanditiis,
+        commodi dicta fugit inventore laboriosam nemo nihil officiis quas quis, sed sunt?
+        Animi commodi cupiditate error expedita ipsam laboriosam magni modi, odit ratione
+        saepe sapiente, sed, tempore. Animi aspernatur consectetur consequatur cumque
+        dignissimos distinctio dolore facilis fuga hic incidunt itaque laboriosam minus
+        nihil officia quasi quibusdam rem repellendus sed soluta, sunt unde, velit veritatis
+        voluptates. Ducimus eos harum id necessitatibus similique. Accusamus ad dolorum et,
+        excepturi iure maxime nemo, nobis nostrum odit optio quae quaerat quam quidem repellendus sit soluta suscipit vel voluptatibus. Ea iure nostrum ratione recusandae suscipit ut velit? Amet cumque debitis eaque, error et similique voluptatibus! Dolores eum ipsa nam praesentium. At doloremque dolores error in iste, laboriosam, laborum libero non perspiciatis quae quas quidem ut velit! Consequatur debitis expedita facere provident saepe sunt. Delectus, nisi quas.</p>
+
+    <script>
+        const box1 = document.getElementById('box1');
+
+        document.getElementById('btn1').onclick = function(){
+            // box1.style = 'color : blue;';
+            // box1.style = 'font-size : 3rem;';
+            // box1.style.color = 'blue';
+            // box1.style.fontSize = '3rem';
+            // 현재 상자의 넓이
+            // box1.style.width = '400px';
+            // alert(box1.style.width);
+            // 버튼 클릭 -> 50px 증가
+            box1.style.width = parseInt(window.getComputedStyle(box1).getPropertyValue('width')) + 50 + 'px';
+
+            // const list = window.getComputedStyle(box1);
+            //
+            // console.log(list.getPropertyValue('width'));
+            // console.log(list.getPropertyValue('border'));
+            // console.log(window.getPropertyValue(document.body));
+
+        }
+
+
+        document.getElementById('btn2').onclick = function(){
+            // box1.style.backgroundColor = 'yellow';
+            // // box1.className = 'one two three';
+            // box1.classList.add('one');
+            // box1.classList.add('two');
+            // box1.classList.add('three');
+            // box1.classList.remove('two');
+
+        }
+
+        let size = 16;
+
+
+        // box1.className = 'one two'
+        document.getElementById('btn3').onclick = function(){
+            size++;
+            if(size > 30) size = 30;
+            document.getElementById('content').style.fontSize = size + 'px';
+        };
+
+        document.getElementById('btn4').onclick = function(){
+            size--;
+            if(size < 9) size = 9;
+            document.getElementById('content').style.fontSize = size + 'px';
+        };
+
+
+    </script>
+</body>
+</html>
