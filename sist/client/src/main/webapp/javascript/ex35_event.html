@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex35_event.html -->
+    <h1>DOM Event</h1>
+
+    <input type="button" value="버튼(BOM)" id="btn1">
+    <input type="button" value="버튼(DOM)" id="btn2">
+
+    <script>
+
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        
+        //BOM Event
+        //- 이벤트 핸들러 사용(속성) > 정적 or 동적
+        //- btn1.onclick = 함수;
+
+        // btn1.onclick = function() {
+        //     alert('버튼1');
+        // };
+
+        //btn1.onclick = m1;
+        //btn1.onclick = m2; //덮어쓰기
+        //btn1.onclick = m3;
+
+        function m1() {
+            alert('m1');
+        }
+        function m2() {
+            alert('m2');
+        }
+        function m3() {
+            m1();
+            m2();
+        }
+
+        btn1.onclick = m4;
+        function m4() {
+            //alert('버튼1');
+            btn2.removeEventListener('click', m5);
+            // btn2.removeEventListener('click', function() {
+            //     alert('셋');
+            // });
+        }
+
+        // btn2.onclick = function() {
+        //     //이벤트 제거(BOM)
+        //     btn1.onclick = null;
+        // };
+
+
+        //DOM Event
+        //- btn2.addEventListener(이벤트종류, 함수);
+        //- 이벤트 함수 관리 > Invocation List
+
+        // btn2.addEventListener('click', function() {
+        //     alert('버튼2');
+        // });
+
+        btn2.addEventListener('click', m5);
+        function m5() {
+            alert('하나');
+        }
+
+        btn2.addEventListener('click', m6);
+        function m6() {
+            alert('둘');
+        }
+
+        btn2.addEventListener('click', function() {
+            alert('셋');
+        });
+
+
+
+
+
+    </script>
+
+</body>
+</html>

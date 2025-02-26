@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex39_variable.html -->
+    <script>
+
+        /*
+            
+            JavaScript Core
+
+            변수 선언하기
+
+            1. var
+            - BOM/DOM/ES6
+            - function-scoped
+            - 함수(영역 인식)
+            - 제어문(영역 인식 불가능)
+            - 중복 선언 가능
+            - 상수 선언 불가능(final)
+
+            2. let
+            - ES6(ECMA 2015)
+            - block-scoped(함수, 제어문)
+            - 변수
+
+            3. const
+            - ES6(ECMA 2015)
+            - block-scoped(함수, 제어문)
+            - 상수(=final 변수)
+
+        */
+
+        var a = 10;
+        var a = 20; //덮어쓰기
+        console.log(a);
+
+        let b = 30;
+        //let b = 30; //Identifier 'b' has already been declared
+
+        function m1() {
+            var c1 = 40; //지역 변수(m1)
+            let c2 = 50; //지역 변수(m1)
+        }
+        m1();
+
+        //console.log(c1);
+        //console.log(c2);
+
+        if (true) {
+            var d1 = 60; //전역 변수
+            let d2 = 70; //지역 변수
+        }
+
+        console.log(d1);
+        //console.log(d2);
+
+        for (var i=0; i<10; i++) {
+
+        }
+
+        for (let i=0; i<10; i++) {
+
+        }
+
+        const e = 100;
+        e = 200; //Assignment to constant variable.
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            width: 126px; height: 126px;
+            /* font-size: 0; */
+        }
+        #tbl1 td img {
+            display: block;
+        }
+    </style>
+</head>
+<!-- <body oncontextmenu="return false;"> -->
+<body>
+    <!-- ex34_content.html -->
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        //<td> x 25 이벤트 추가
+        
+        //1. 태그명 td
+        //- document.getElementsByTagName('td')
+        //2. CSS 선택자
+        //- document.querySelectorAll('#tbl1 td')
+
+        var list = document.querySelectorAll('#tbl1 td');
+        //alert(list.length);
+
+
+        //루프 변수 i > 지역 변수(X), 전역 변수(O)
+        for (var i=0; i<list.length; i++) {
+            list[i].onmousedown = function() {
+                
+                //Cannot set properties of undefined
+
+                //클릭한 <td> 콘텐츠 조작
+                //list[i].textContent = '클릭';
+                //event.target.textContent = '클릭';
+                //event.target.bgColor = 'gold';
+
+                if (event.buttons == 1) {
+                    event.target.innerHTML = '<img src="images/rect_icon01.png">';
+                } else if (event.buttons == 2) {
+                    event.target.innerHTML = '<img src="images/rect_icon02.png">';
+                }
+
+            };
+        }//for
+
+        console.log(i);
+
+        window.oncontextmenu = function() {
+            return false;
+        };
+
+        //초간단 토이 프로젝트
+        //- Tic Tac Toc
+        //- 오목
+        //- 온라인 버전
+        //- 유저
+        //- 대전기록
+        //- 복기
+
+    </script>
+
+</body>
+</html>

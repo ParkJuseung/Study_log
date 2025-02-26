@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex36_manipulation.html -->
+    <h1>DOM 조작</h1>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <input type="button" value="버튼3" id="btn3">
+    <input type="button" value="버튼4" id="btn4">
+    <input type="button" value="버튼5" id="btn5">
+    <hr>
+    <div id="div1"></div>
+    <hr>
+    <img src="images/cat01.jpg" id="cat1" width="300">
+
+
+    <script>
+        var div1 = document.getElementById('div1');
+        
+        //HTML 태그 조작하기
+        //1. 태그 자체
+        //2. 태그의 속성
+        //3. 태그의 콘텐츠
+
+        var hr;
+
+        document.getElementById('btn1')
+        .addEventListener('click', function() {
+
+            //동적으로 태그 생성하기
+            //1. innerHTML
+            //  - 쉽다. + 비용 저렴
+            //  - 간단한 작업용
+            //  - 모든 걸 문자열로 조작(***)
+            //div1.innerHTML = '<input type="text" size="10">';
+
+            //2. 표준 기능
+            //  - 복잡하다. + 비용 고가
+            //  - 복잡한 작업용
+
+            //2.1 태그 객체 생성
+            var input = document.createElement('input'); //<input>
+
+            //2.2 속성 추가
+            //- input.size = 10; //BOM
+            var type = document.createAttribute('type'); //type=""
+            type.value = 'text'; //type="text"
+            input.setAttributeNode(type); //<input type="text">
+
+            //<input type="text" size="10">
+            input.setAttribute('size', 10); 
+
+            div1.appendChild(input); //자식으로 추가
+
+
+            //<hr>
+            hr = document.createElement('hr'); //<hr>
+
+            div1.appendChild(hr);
+
+            //<p align="center">문단입니다.</p>
+            var p = document.createElement('p'); //<p></p>
+            p.setAttribute('align', 'center'); //<p align="center"></p>
+
+            //PCDATA
+            var txt = document.createTextNode('문단입니다.');
+            //txt.value = '문단입니다.';
+            p.appendChild(txt); //<p align="center">문단입니다.</p>
+
+            //p.innerText = '문단입니다.';
+            //p.textContent = '문단입니다.';
+
+            div1.appendChild(p);
+
+        });
+
+        document.getElementById('btn2').addEventListener('click', function() {
+            
+            //태그 삭제하기
+            //<div id="div1">
+            //    <input type="text" size="10">
+            //    <hr>
+            //    <p align="center">문단입니다.</p>
+            //</div>
+
+            //1. innerHTML
+            //2. 조작 기능
+
+            //div1.innerHTML = '';
+
+            //div1.appendChild()
+            //div1.removeChild()
+
+            //div1.removeChild(hr);
+            //console.log(document.getElementsByTagName('hr')[1]);
+            div1.removeChild(document.getElementsByTagName('hr')[1]);
+
+        });
+
+        document.getElementById('btn3').addEventListener('click', function() {
+
+            //고양이 x 5마리 + 클릭 이벤트
+            /*
+            for (var i=0; i<5; i++) {
+                // div1.innerHTML += '<img src="images/catty0' + (i+1) + '.png" onclick="f1();">';                
+                div1.innerHTML += '<img src="images/catty0' + (i+1) + '.png">';  
+            }
+
+            var cats = document.querySelectorAll('#div1 > img');
+            //alert(cats.length);
+            for (var i=0; i<cats.length; i++) {
+                cats[i].onclick = f1;
+            }
+            */
+
+
+            for (var i=0; i<5; i++) {
+
+                var img = document.createElement('img');
+
+                img.setAttribute('src', 'images/catty0' + (i+1) + '.png');
+                img.addEventListener('click', function() {
+                    //alert(event.target.src);
+                    div1.removeChild(event.target);
+                });
+
+                div1.appendChild(img);
+
+            }
+            
+        });
+
+        function f1() {
+            alert(event.target.src);
+        } 
+
+        document.getElementById('btn4').addEventListener('click', function() {
+
+            //<img src="images/cat01.jpg" id="cat1" width="300">
+
+            var cat1 = document.getElementById('cat1');
+
+            //BOM > 실제 객체의 상태를 가져온다.
+            //alert(cat1.src);
+            //alert(cat1.width);
+            //alert(cat1.height); //226
+
+            //DOM > 소스상의 적혀있는 속성값을 가져온다.
+            //alert(cat1.getAttribute('src'));
+            //alert(cat1.getAttribute('width'));
+            //alert(cat1.getAttribute('height'));
+            
+        });
+
+        document.getElementById('btn5').addEventListener('click', function() {
+            
+            //BOM
+            //cat1.src = 'images/cat02.jpg';
+            //cat1.width = 500;
+
+            //DOM
+            cat1.setAttribute('src', 'images/cat03.jpg');
+            cat1.setAttribute('width', 500);
+
+        });
+
+    </script>
+
+</body>
+</html>

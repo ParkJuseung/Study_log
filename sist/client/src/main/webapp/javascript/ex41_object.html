@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex41_object.html -->
+    <script>
+
+        /*  
+
+            객체, Object
+            - JavaScript에는 클래스가 없다. 하지만 내장 객체를 제공한다.
+
+            1. 내장 객체
+                - Date, Array, Math, Object, Number 등..
+                - 자바스크립트가 만들어서 제공하는 클래스(?)
+            
+            2. BOM 객체
+                - window, document, form, text, button 등
+            
+            3. DOM 객체
+                - element, attribute, text, comment 등
+
+            4. 사용자 정의 객체
+                - JavaScript에는 클래스가 없다.
+                    > 원하는 형태의 객체를 생성 불가능
+                    > 가능하게 하는 기술 제공
+
+            
+            사용자 정의 객체
+            1. Object 내장 객체를 사용
+                - var obj = new Object();
+                - var list = new Array();
+
+            2. {}, 객체 리터럴
+                - var obj = {};
+                - var list = [];
+
+
+            class User {
+                public String name;
+                public int age;
+                public String address;
+            }
+
+            User hong = new User();
+
+            hong.name = "홍길동";
+            hong.age = 20;
+            hong.address = "서울시";
+
+        */
+
+        const hong = new Object(); //빈객체
+        console.log(hong);
+
+        //자바스크립트의 모든 객체는 프로퍼티를 자유롭게 추가/삭제가 가능하다.
+        hong.name = '홍길동';
+        hong.age = 20;
+        hong.address = '서울시';
+        console.log(hong);
+
+        console.log(hong.name);
+        console.log(hong.age);
+        console.log(hong.address);
+
+        delete hong.address; //프로퍼티 삭제
+        console.log(hong);
+
+
+        //자바스크립트 프로퍼티 표기법
+        //1. hong.tel
+        //2. hong['tel']
+
+        //hong.tel = '010-1234-5678';
+        hong['tel'] = '010-1111-2222';
+
+        //hong.primary-phone = '010';
+        hong['primary-phone'] = '010';
+
+        console.log(hong);
+
+        console.clear();
+
+
+        const dog = new Object();
+
+        dog.name = '강아지';
+        dog.age = 3;
+        dog.address = '서울시';
+
+        const cat = new Object();
+
+        cat.name = '고양이';
+        cat.age = 2;
+        cat.addres = '인천시';
+
+        //위 문제점에 대한 해결책
+        //1. 생성자 함수
+        //2. class
+
+
+
+        //자바스크립트 객체 만들기
+        //1. 빈 객체를 만든다.
+        //2. 원하는 프로퍼티를 추가한다.
+
+        const lee = new Object();
+
+        lee.name = '이순신';
+        lee.age = 30;
+        lee.address = '서울시 강동구';
+
+        const park ={}
+        park.name = "박문수"
+        park.age = 35
+        park.address = '서울시 강서구'
+
+        console.clear();
+        console.dir(lee);
+        console.log(lee)
+        console.dir(park)
+
+        const you = {
+            name: '유재석',
+            age : 40,
+            address: '서울시 중구'
+        };
+
+        console.table(you);
+
+        you.gender = 'm';
+        console.table(you);
+        console.table(window);
+        console.dir(window);
+        //
+        // const turtle ={
+        //     name : '거북이',
+        //     age : 300,
+        //     address : '서울시 강남구 역삼동 한독빌딩'
+        //
+        // }
+
+        //
+        // const turtle ={
+        //     name : '거북이',
+        //     age : 300,
+        //     sido : '서울시',
+        //     gugun : '강남구',
+        //     dong : '역삼동',
+        //     bunji: '한동빌딩'
+        //
+        // }
+
+
+        const address = {
+            sido : '서울시',
+            gugun : '강남구',
+            dong : '역삼동',
+            bunji: '한독빌딩'
+        }
+
+
+        const turtle ={
+            name : '거북이',
+            age : 300,
+            address : address
+        }
+        console.log(turtle);
+        console.table(turtle)
+
+
+        const puppy = {
+            name : '멍멍이',
+            age : 1,
+            address : {
+                sido : '서울시',
+                gugun : '강남구',
+                dong : '역삼동'
+            },
+            nick: ['꼬물이', '인절미'],
+        }
+
+        console.log(puppy.nick);
+        console.log(puppy.nick[1]);
+
+        //고양이 객체 3개 관리 -> 배열
+        const cat1 = {
+            name : '냥이1',
+            age : 1
+        }
+
+        const cat2 = {
+            name : '냥이2',
+            age : 2
+        }
+
+        const cat3 = {
+            name : '냥이3',
+            age : 3
+        }
+
+        const clist1 = [];
+        clist1[0] = cat1;
+        clist1[1] = cat2;
+        clist1[2] = cat3;
+
+        const clist2 = [];
+        clist2.push(cat1);
+        clist2.push(cat2);
+        clist2.push(cat3);
+
+        const clist3 = [cat1, cat2, cat3];
+
+        const clist4 =[
+            {
+                name : '냥이1',
+                age : 1
+            },
+            {
+                name : '냥이2',
+                age : 2
+            },
+            {
+                name : '냥이3',
+                age : 3
+            }
+        ]
+
+        console.clear();
+
+        //객체 = 데이터 + 행동
+        const pig = {
+            name : '꿀꿀이',
+            age : 5,
+            eat : function(){
+                console.log('꿀꿀꿀' + this.name);
+            }
+        }
+
+        pig.eat();
+        pig.sleep = function () {
+            console.log('쿨쿨 zzz' + this.name);
+        };
+
+        pig.sleep();
+        function run() {
+            console.log('돼지가 달린다.' + this.name);
+        }
+
+        pig.run  = run;
+        pig.run();
+        run();
+
+
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex40_hoisting.html -->
+    <script>
+
+        /* 
+            호이스팅, Hoisting
+            - 변수 호이스팅
+            - 함수 호이스팅(**)
+        */
+
+        function f1() {
+            alert('f1');
+        }
+
+        //f1();
+
+        //f2(); //??
+
+        function f2() {
+            alert('f2');
+        }
+
+        
+
+        console.log(a); //undefined
+
+        var a = 10;
+
+
+        //let과 const는 호이스팅이 발생안한다.(50점)
+        //let과 const는 호이스팅이 발생한다. > TDZ(Temporal Dead Zone) > 100점
+
+        //console.log(b); //Cannot access 'b' before initialization
+        //let b = 20; 
+        
+        //console.log(c);
+        //const c = 30; //Cannot access 'c' before initialization
+        
+
+        //호이스팅 대상
+        function f3() {
+
+        }
+
+        //m3(); //m3 is not a function
+        var m3 = function() {
+            alert('m3');
+        };
+        //m3();
+
+        //m4();
+        const m4 = function() {
+            alert('m4');
+        };
+        m4();
+
+
+    </script>
+
+</body>
+</html>
