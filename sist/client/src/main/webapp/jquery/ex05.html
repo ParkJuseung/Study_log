@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .one {color : blue;}
+        .two {background-color : gold;}
+    </style>
+</head>
+<body>
+    <h1>jQuery + CSS</h1>
+    <input type="button" value="버튼1" id="btn1">
+    <hr>
+    <div id="box1">상자1</div>
+    <div id="box2">상자1</div>
+
+
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $('#box1').css({
+            color : 'blue',
+            backgroundColor : 'gold',
+            'font-size' : '3rem',
+
+            //DOM
+            //box1.className = 'one;
+            //box1.classList.add('one')
+            //box1.classList.remove('one')
+            //box1.classList.contains('one')
+
+            //Jquery
+            // $('#box1').addClass('one'),
+            // $('#box1').addClass('two');
+            // $('#box1').removeClass('one');
+            // $('#box1').toggleClass('one');
+        })
+
+
+
+    </script>
+</body>
+</html>

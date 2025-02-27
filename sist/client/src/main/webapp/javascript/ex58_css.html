@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width : 560px;
+            height : 560px;
+            margin : 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="images/roulette.png">
+    </div>
+
+    <script>
+        const roulette = document.querySelector('#box img');
+        let degree = 1;
+        let timer = 0;
+
+        roulette.onclick = function(){
+            if(timer === 0){
+
+                timer = setInterval(function() {
+                    roulette.style.transform = `rotate(${degree}deg)`;
+                    degree++;
+                }, 1)
+
+            }else{
+                clearInterval(timer);
+                timer = 0;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

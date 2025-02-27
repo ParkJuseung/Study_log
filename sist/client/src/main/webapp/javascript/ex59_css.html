@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #menu{
+            width : 630px;
+            display : flex;
+            position : fixed;
+            top : 0;
+            left : 0;
+            right : 0;
+            margin : 0 auto;
+            transform : translate(0px, -100px);
+
+        }
+
+        #menu > img{
+            transition : all .5s;
+        }
+
+        #menu > img:hover {
+            transform: translate(0px, 90px);
+        }
+    </style>
+</head>
+<body>
+    <nav id="menu">
+        <img src="images/rect_icon01.png" alt="">
+        <img src="images/rect_icon02.png" alt="">
+        <img src="images/rect_icon03.png" alt="">
+        <img src="images/rect_icon04.png" alt="">
+        <img src="images/rect_icon05.png" alt="">
+    </nav>
+
+    <script>
+        const items = document.querySelectorAll('#menu > img');
+        let oldItem = null;
+
+
+        items.forEach(item =>{
+/*            item.onmouseover = function(){
+                event.target.style.transfrom = 'translate(0px, 90px)';
+            }
+            item.onmouseout = function(){
+                event.target.style.transfrom = 'translate(0px, 0px)';
+            }*/
+
+
+            item.onClick = function(){
+                if(oldItem != null){
+                    oldItem.style.tranform = 'translate(0px, 90px)';
+                }
+
+                if(event.target !== oldItem){
+                    event.target.style.transform = 'translate(0px, 90px)';
+                    oldItem = event.target;
+                }else {
+                    event.target.style.transform = 'translate(0px, 0px)';
+                    oldItem = null;
+                }
+
+            }
+        })
+
+
+    </script>
+</body>
+</html>

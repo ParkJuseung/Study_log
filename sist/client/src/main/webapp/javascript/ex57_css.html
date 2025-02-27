@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resizable Box</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: gold;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="box1" class="box"></div>
+
+<script>
+    const box1 = document.getElementById('box1');
+    let isDown = false;
+    let startX, startY;
+
+    window.onmousedown = function(event) {
+        if (event.target.id === 'box1' && isValid(event)) {
+            isDown = true;
+            startX = event.clientX;
+            startY = event.clientY;
+        }
+    };
+
+    function isValid(event) {
+        // 마우스가 상자의 우측 하단을 눌렀는지?
+        const w = parseInt(window.getComputedStyle(box1).getPropertyValue('width'));
+        const y = parseInt(window.getComputedStyle(box1).getPropertyValue('height'));
+
+        if (event.offsetX >= (w - 20) && event.offsetX <= w &&
+            event.offsetY >= (y - 20) && event.offsetY <= y) {
+            return true;
+        }
+        return false;
+    }
+
+    window.onmousemove = function(event) {
+        if (isDown) {
+            const deltaX = event.clientX - startX;
+            const deltaY = event.clientY - startY;
+
+            box1.style.width = 150 + deltaX + 'px';
+            box1.style.height = 150 + deltaY + 'px';
+        }
+    };
+
+    window.onmouseup = function() {
+        isDown = false;
+    };
+</script>
+</body>
+</html>

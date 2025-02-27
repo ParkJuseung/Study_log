@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1{
+            width : 150px;
+            height: 150px;
+            background-color: gold;
+            position : relative;
+            left : 0;
+            top : 0;
+        }
+    </style>
+</head>
+<body>
+<h1>drag & drop</h1>
+<div id="box1" class="box"></div>
+<p>상자를 클릭해서 이동해보세요.</p>
+
+<script>
+    const box1 = document.getElementById('box1');
+    let isDown = false;
+    let bx = box1.getBoundingClientRect().x;
+    let by = box1.getBoundingClientRect().y;
+
+
+    window.onmousedown = function(){
+        // 누른 대상이 비어있는 영역 / 상자?
+        if(event.target.id === 'box1'){
+            isDown = true;
+            x = event.offsetX;
+            y = event.offsetY;
+
+        }
+    }
+    window.onmousemove = function(){
+        if(isDown){
+            box1.style.left = event.clientX - x - bx + 'px';
+            box1.style.top = event.clientY - y - by + 'px';
+        }
+    }
+    window.onmouseup = function(){
+        isDown = false;
+    }
+</script>
+</body>
+</html>

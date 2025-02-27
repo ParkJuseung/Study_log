@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width : 150px;
+            height: 150px;
+
+        }
+        #box1{background-color: orange}
+        #box2{background-color: rebeccapurple}
+        #box3{background-color: cornflowerblue}
+
+        .draggable{
+            position : relative;
+            left : 0;
+            top : 0;
+        }
+    </style>
+</head>
+<body>
+<h1>drag & drop</h1>
+<div id="box1" class="box draggable" ></div>
+<div id="box2" class="box draggable" ></div>
+<div id="box3" class="box draggable" ></div>
+<p>상자를 클릭해서 이동해보세요.</p>
+
+<script>
+    let obj;
+    let isDown = false;
+    let x = 0;
+    let y = 0;
+    let bx;
+    let by;
+
+
+    window.onmousedown = function(){
+        // 누른 대상이 비어있는 영역 / 상자?
+        if(event.target.classList.contains('draggable')){
+            isDown = true;
+            x = event.offsetX;
+            y = event.offsetY;
+
+            bx = event.target.getBoundingClientRect().x - parseInt(event.target.style.left != '' ? event.target.style.left:0);
+            by = event.target.getBoundingClientRect().y - parseInt(event.target.style.left != '' ? event.target.style.left:0);
+
+            obj = event.target;
+
+        }
+    }
+    window.onmousemove = function(){
+        if(isDown){
+            obj.style.left = event.clientX - x - bx + 'px';
+            obj.style.top = event.clientY - y - by + 'px';
+        }
+    }
+    window.onmouseup = function(){
+        isDown = false;
+    }
+</script>
+</body>
+</html>

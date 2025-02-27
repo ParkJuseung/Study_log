@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* 박스 영역 설정 */
+        #box {
+            border: 5px solid greenyellow;
+            width: 250px;
+            height: 188px;
+            margin: 0 auto;
+            overflow: hidden; /* 넘치는 부분 숨기기 */
+            position: relative; /* 위치 기준 설정 */
+        }
+
+        /* 이미지 리스트 설정 */
+        #list {
+            display: flex; /* 가로 정렬 */
+            transition: transform 0.5s ease; /* 부드러운 이동 효과 */
+            transform: translateX(0px); /* 초기 위치 */
+        }
+
+        /* 각각의 이미지 크기 */
+        #list img {
+            width: 250px; /* 박스 너비에 맞춤 */
+            height: 188px; /* 박스 높이에 맞춤 */
+            flex-shrink: 0; /* 이미지 크기 고정 */
+        }
+
+        /* 호버 시 첫 이미지 이동 */
+        #box:hover #list {
+            transform: translateX(-250px); /* 박스 크기만큼 이동 */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>고양이</h1>
+
+    <div id="box">
+        <div id="list">
+
+            <img src="images/cat01.jpg" alt="">
+            <img src="images/cat02.jpg" alt="">
+            <img src="images/cat03.jpg" alt="">
+            <img src="images/cat04.jpg" alt="">
+            <img src="images/cat05.jpg" alt="">
+
+        </div>
+    </div>
+
+    <select id="sel1">
+        <option value="1">고양이1</option>
+        <option value="2">고양이2</option>
+        <option value="3">고양이3</option>
+        <option value="4">고양이4</option>
+        <option value="5">고양이5</option>
+    </select>
+
+    <hr>
+    <input type="range" id="range1" min="0" max="100" style="width : 290px" value="0">
+
+    <script>
+
+        const list = document.getElementById('list')
+        const sel1 = document.getElementById('sel1')
+
+        sel1.onchange = function(){
+            sel1.value
+            list.style.transform = `translateX(-${sel1.value * 250}px)`;
+
+        }
+
+
+        window.onkeydown = function(){
+            if(event.keyCode >=1 && event.keyCode <=5){
+                list.style.transform = `translateX(-${sel1.value - 1}px)`;
+            }
+        }
+
+        document.getElementById('range1').onchange = function(){
+            list.style.transform = `translateX(-${event.target.value * 250}px)`;
+        }
+    </script>
+
+
+</body>
+</html>

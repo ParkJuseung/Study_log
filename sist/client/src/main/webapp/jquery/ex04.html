@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1{
+            width : 200px;
+            height : 200px;
+            border : 1px solid black;
+            background-color : gold;
+        }
+    </style>
+</head>
+<body>
+<h1>JQuery Effect</h1>
+    <input type="button" value="버튼1" id="btn1" class="btn">
+    <input type="button" value="버튼2" id="btn2" class="btn">
+    <input type="button" value="버튼3" id="btn3" class="btn">
+
+    <hr>
+
+    <div id="box1">상자</div>
+
+
+
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        //JQuery Effect
+        //1. hide(), show(), toggle()
+
+
+
+        $('#btn1').click(()=>{
+            //jquery함수는 매개변수를 객체로 잘 전달한다.
+            // $('#box1').animate({
+            //
+            //
+            // });
+            //
+            // $('#box1').animate({
+            //     width : '+=50px',
+            //     height : '+=50'
+            // })
+
+            // let count = 0;
+            //
+            // $('#box1').animate({
+            //     width : '+=100px',
+            //
+            // }, 3000, function (){
+            //     $('#box1').animate({
+            //         height:'+=100px'
+            //     }, 2000, function(){
+            //         $('#box1').animate({
+            //             fontSize : '+=3rem'
+            //         })
+            //     })
+            // });
+
+            $('box1').animate({
+                width : '+=100px'
+            }, 2000)
+        })
+
+        $('#btn2').click(()=>{
+            $('#box1').slideUp();
+        })
+
+        $('#btn3').click(()=>{
+            $('#box1').slideToggle();
+        })
+
+
+        //다량의 매개변수를 가진 함수를 생성시 고려할 점
+        function f1(name, age, gender){
+            console.log('name', name);
+            console.log('age',age);
+            console.log('gender', gender);
+        }
+
+        f1('홍길동', 20, '남자');
+
+
+        function f2(obj){
+            console.log('name', obj.name);
+            console.log('age',obj.age);
+            console.log('gender', obj.gender);
+        }
+
+        const hong = {
+            name : '홍길동',
+            age : 20,
+            gender : '남자'
+        }
+
+        f2(hong);
+
+
+
+    </script>
+</body>
+</html>

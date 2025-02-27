@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>jQuery 함수</h1>
+    <input type="button" value="버튼1" id="btn1">
+    <hr>
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        document.getElementById('btn1').addEventListener('click', ()=>{
+            // document.querySelectorAll('.box').forEach(box => {
+            //     box.style.backgroundColor = 'gold';
+            // })
+            //
+            // const list = document.getElementsByClassName('box');
+            //
+            // for(let i=0; i<list.length; i++){
+            //     list[i].style.color = 'blue';
+            // }
+            //
+            // Array.from(document.getElementsByClassName('box')).forEach(
+            //     box=> {
+            //         box.style.backgroundColor = 'gold';
+            //     }
+            // );
+
+            // alert(jQuery('.box').length);
+
+            // const list2 = jQuery('.box');
+            //
+            // for(let i=0; i<list2.length;i++){
+            //     list2[i].style.color = 'orange';
+            // }
+
+            //jquery는 무조건 일괄 적용
+            // jQuery('#btn1').css('color', 'green');
+            //
+            // //태그 선택자
+            // jQuery('*').css('color', 'blue');
+            // jQuery('#btn1').css('color', 'blue');
+            // jQuery('.box').css('color', 'blue');
+
+            jQuery('h1, div:nth-child(odd)').css('color', 'blue');
+
+
+
+
+            const a = document.all.btn1;
+            const b = document.getElementById('btn1');
+            const c = jQuery('#btn1'); // 기능 확장을 위해 wrapper class -> jquery 객체
+
+            console.log(a === b);
+            console.log(a === c);
+            console.log(b === c);
+
+            // a.style.color = 'blue';
+            // c.style.color = 'red';
+
+            c.css('color', 'gold');
+
+
+
+
+
+
+
+
+
+        })
+
+    </script>
+</body>
+</html>
