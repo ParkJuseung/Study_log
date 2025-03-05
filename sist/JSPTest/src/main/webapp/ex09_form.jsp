@@ -33,10 +33,26 @@
         <div><input type="submit" value="보내기"></div>
     </form>
 
+    <h2>폼태그 없이 데이터 전송하기 </h2>
+    <div>
+        <a href="ex09_ok.jsp?txt=hong&num=123">페이지 이동</a>
+    </div>
+    <div>
+        <input type="button" value="클릭" id="btn1">
+    </div>
+
+    <h2>get 대량의 데이터</h2>
+    <form method="GET" action="ex09_ok.jsp">
+        <textarea name="txt2" class="full"></textarea>
+        <button>보내기</button>
+    </form>
+
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://bit.ly/4cMuheh"></script>
 <script>
-
+    $('#btn1').click(() =>{
+        location.href = `ex09_ok.jsp?txt=\${document.getElementById('btn1').value}&num=11`
+    })
 </script>
 </body>
 </html>
