@@ -1,0 +1,17 @@
+<google:목록 xmlns:google="http://google.com">
+
+<구매목록 xmlns="http://google.com" xmlns:상품="http://naver.com">
+
+    <구매내역>
+        <상품:번호>1</상품:번호>
+        <상품:이름>마우스</상품:이름>
+        <상품:가격>30000</상품:가격>
+        <아이디>hong</아이디>
+        <이름>홍길동</이름>
+    </구매내역>
+
+
+</구매목록>
+
+
+</google:목록>
