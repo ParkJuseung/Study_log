@@ -43,7 +43,8 @@
         $('#member').sortable();
 
         $('#member img').each((index, item) => {
-            
+            $('#memberList').append(`<span>$(item).data('name')</span>`);
+
         });
 
     </script>

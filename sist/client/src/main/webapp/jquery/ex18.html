@@ -1,20 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <style>
+        #list .item{
+            border : 1px solid #999;
+            width : 150px;
+            height: 220px;
+            text-align: center;
+            padding : 20px 10px;
+            margin : 10px;
+            float : left;
+        }
 
-  </style>
+        #list .item div{
+            font-size : 1.2rem;
+            font-weight : bold;
+            color : tomato
+        }
+
+        #list .item div::after {
+            content : '원';
+        }
+        #search{
+            border : 1px solid #999;
+            padding : 15px;
+            margin : 20px;
+        }
+
+        #price{
+            margin : 20px;
+        }
+    </style>
 </head>
 <body>
-    $END$
-    
-  <script src="js/jquery-3.7.1.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script>
-        
-  </script>
+    <h1>상품 목록</h1>
+
+    <div id="search">
+        가격 : <span><span>30,000</span>원 ~ <span>70,000</span>원</span>
+        <div id="price"></div>
+    </div>
+
+    <div id="list">
+        <div class="item"><img src="images/rect_icon01.png" alt="">
+            <div>100000</div>
+            Lorem ipsum.
+        </div>
+        <div class="item"><img src="images/rect_icon02.png" alt="">
+            <div>20000</div>
+            Fuga, quod?
+        </div>
+        <div class="item"><img src="images/rect_icon03.png" alt="">
+            <div>30000</div>
+            Iure, sapiente.
+        </div>
+        <div class="item"><img src="images/rect_icon04.png" alt="">
+            <div>40000</div>
+            Laudantium, qui?
+        </div>
+        <div class="item"><img src="images/rect_icon05.png" alt="">
+            <div>50000</div>
+            Dolor, quo.
+        </div>
+        <div class="item"><img src="images/rect_icon06.png" alt="">
+            <div>60000</div>
+            Harum, nihil!
+        </div>
+        <div class="item"><img src="images/rect_icon07.png" alt="">
+            <div>70000</div>
+            Cum, totam.
+        </div>
+        <div class="item"><img src="images/rect_icon08.png" alt="">
+            <div>80000</div>
+            Exercitationem, sed.
+        </div>
+        <div class="item"><img src="images/rect_icon09.png" alt="">
+            <div>90000</div>
+            Dolorum, tenetur.
+        </div>
+        <div class="item"><img src="images/rect_icon10.png" alt="">
+            <div>10000</div>
+            Laboriosam, veniam!
+        </div>
+        <div class="item"><img src="images/rect_icon11.png" alt="">
+            <div>11000</div>
+            Reiciendis, sapiente?
+        </div>
+        <div class="item"><img src="images/rect_icon12.png" alt="">
+            <div>12000</div>
+            Nulla, reiciendis.
+        </div>
+        <div class="item"><img src="images/rect_icon13.png" alt="">
+            <div>13000</div>
+            Dolores, eaque!
+        </div>
+        <div class="item"><img src="images/rect_icon14.png" alt="">
+            <div>64000</div>
+            Ducimus, maiores.
+        </div>
+        <div class="item"><img src="images/rect_icon15.png" alt="">
+            <div>55000</div>
+            Ipsum, non.
+        </div>
+        <div class="item"><img src="images/rect_icon16.png" alt="">
+            <div>46000</div>
+            Architecto, unde!
+        </div>
+        <div class="item"><img src="images/rect_icon17.png" alt="">
+            <div>37000</div>
+            Aspernatur, doloribus.
+        </div>
+        <div class="item"><img src="images/rect_icon18.png" alt="">
+            <div>28000</div>
+            Dolor, esse!
+        </div>
+    </div>
+
+<script src="js/jquery-3.7.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+    $('.item div').each((index,item) =>{
+        $(item).text(parseInt($(item).text()).toLocaleString());
+    })
+</script>
 </body>
 </html>

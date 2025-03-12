@@ -1,18 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
 
-  </style>
+    </style>
 </head>
 <body>
-    $END$
-    
-    <script src="js/jquery-3.7.1.js"></script>
-    <script>
-        
-    </script>
+    <h1>jquery 태그조작</h1>
+
+    <input type="button" value="버튼1" id="btn1">
+    <hr>
+    <div id="box1">상자</div>
+    <hr>
+    <input type="text" id="txt1">
+
+<script src="js/jquery-3.7.1.js"></script>
+<script>
+    $('#btn1').click(function(){
+        //콘텐츠 조작
+        //- innerText(textContent) -> text()
+        //- innerHTML -> html()
+        //- value -> val()
+
+        // $('#box1').text()
+        // $('#box1').text('안녕하세요')
+        // $('#box1').html('<input type="text">')
+        // $('#btn1').val('Button');
+
+        //HTML 속성 조작
+        //1 . BOM
+        // -obj.prop -> 읽기
+        // -obj.prop = value; -> 쓰기
+
+        //2. DOM
+        // - obj.getAttribute('prop') -> 읽기
+        // - obj.setAttribute('prop', value) -> 쓰기
+
+
+        //3. JQuery
+        // - obj.attr('prop') -> 읽기
+        // - obj.attr('prop',value) -> 쓰기
+        // - obj.prop('prop') -> 읽기
+        // - obj.prop('prop', value) -> 쓰기
+        //
+        // $('#txt1').prop('size', 10)
+        //     .prop('title', '이름을 입력하세요')
+        //     .prop('maxlength', 5);
+
+        $('#txt1').prop({
+            size : 10,
+            title : '이름을 입력하세요',
+            maxlength : 5
+        })
+
+        // 태그 동적 추가/ 삭제하기
+        // $('#box1').html('<img src="images/catty01.png">')
+        // $('#box1').append('<img src="images/catty01.png">');
+        // $('<img src="images/catty01.png">').css('border', '3px solid tomato').appendTo('#box1');
+        $('input').remove();
+    })
+
+
+
+
+
+</script>
 </body>
 </html>

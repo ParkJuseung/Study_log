@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>PWA 핸드폰 UI</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        .phone-frame {
+            width: 390px;
+            height: 844px;
+            border: 14px solid #000;
+            border-radius: 60px;
+            position: relative;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+            background-color: #fff;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+            padding-top: 50px; /* 노치 공간 */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 170px;
+            height: 35px;
+            background-color: #000;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 2;
+        }
+
+        .speaker {
+            width: 60px;
+            height: 6px;
+            background-color: #444;
+            border-radius: 3px;
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007aff;
+            color: #fff;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        /* 모바일 화면에서 노치 숨기고 프레임 제거 */
+        @media (max-width: 480px) {
+            body {
+                background-color: #fff;
+            }
+            .phone-frame {
+                width: 100vw;
+                height: 100vh;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .screen {
+                width: 100vw;
+                height: 100vh;
+                border-radius: 0;
+                padding-top: 0; /* 노치 공간 제거 */
+            }
+            .notch, .speaker {
+                display: none; /* 모바일에서 노치 & 스피커 숨기기 */
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="phone-frame">
+    <div class="notch"></div>
+    <div class="speaker"></div>
+    <div class="screen">
+        <div class="content">
+            <h2>PWA 핸드폰 UI 예시</h2>
+            <p>이 화면은 아이폰 12 Pro의 실제 크기를 기준으로 제작되었습니다.</p>
+            <button onclick="alert('버튼 클릭됨!')">예시 버튼</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('button').addEventListener('click', () => {
+        console.log('버튼이 클릭되었습니다.');
+    });
+</script>
+</body>
+</html>

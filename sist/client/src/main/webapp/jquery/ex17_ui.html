@@ -1,20 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <style>
 
-  </style>
+    </style>
 </head>
 <body>
-    $END$
-    
+
+  <h1>Accordion</h1>
+  <div id="a1">
+    <h2>HTML</h2>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deleniti fugiat ipsum mollitia? Alias, architecto dignissimos fuga iusto mollitia nulla voluptatem. Animi eveniet inventore, laboriosam necessitatibus pariatur quaerat repellendus sit!</div>
+    <h2>CSS</h2>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias at atque consequatur consequuntur cumque doloribus in iste, magnam mollitia nulla quaerat rerum similique temporibus tenetur vel veritatis vitae voluptatum.</div>
+    <h2>Javascript</h2>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eius facilis impedit in ipsam nesciunt numquam perferendis sed! Autem consectetur distinctio placeat reiciendis repudiandae vel, vero voluptatibus? Ipsum laboriosam, odio!</div>
+  </div>
+
+    <h1>버튼</h1>
+
+    <input type="button" value="글쓰기" class="btn">
+    <input type="button" value="취소하기" class="btn">
+
+    <div class="btns">
+
+      <input type="button" value="글쓰기" class="btn">
+      <input type="button" value="취소하기" class="btn">
+
+    </div>
+
+    선택 : <input type="date">
+
+  <hr>
+    선택 : <input type="text" id="date1">
+
+
+    <h1>대화상자</h1>
+
+    <input type = "button" value="확인" id="btn1" class="btn">
+
+  <div id="dialog1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, cupiditate et fuga ipsa laudantium quisquam sed! Accusantium dignissimos enim eos fugiat, tempora tempore totam unde. Distinctio minus nulla reiciendis.</div>
   <script src="js/jquery-3.7.1.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script>
-        
+
+    $('#a1').accordion();
+    $('.btn').button();
+    $('.btns').controlgroup();
+    $('#date1').datepicker({
+      dateFormat : 'yy-mm-dd',
+      minDate : '-1M',
+      maxDate : '1M'
+    });
+
+
+    $('#dialog1').hide();
+
+    $('#btn1').click(() =>{
+      $('#dialog1').dialog({
+        title : '대화상자',
+        width : 300,
+        height : 300,
+        resizable: false,
+        modal : true, // 포커스 독점
+        modeless : true // 포커스 자유로움
+
+      })
+    })
+
+
+
   </script>
 </body>
 </html>

@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
 
-  </style>
+    </style>
 </head>
 <body>
-    $END$
-    
-    <script src="js/jquery-3.7.1.js"></script>
-    <script>
-        
-    </script>
+<img src="images/dog01.jpg" id="dog1">
+
+<script src="js/jquery-3.7.1.js"></script>
+<script>
+    // $('#dog1')
+    //     .mouseover(()=>{
+    //         $(event.target).attr('src', 'images/dog02.jpg');
+    //     })
+    //     .mouseout(()=>{
+    //         $(event.target).attr('src', 'images/dog01.jpg');
+    //     })
+    //
+    $('#dog1').on({
+        mouseover:()=>{
+            $(event.target).attr('src', 'images/dog02.jpg');
+        },
+        mouseout:()=>{
+            $(event.target).attr('src', 'images/dog01.jpg');
+        }
+
+    })
+</script>
 </body>
 </html>

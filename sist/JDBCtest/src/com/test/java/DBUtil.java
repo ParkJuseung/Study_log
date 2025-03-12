@@ -18,10 +18,8 @@ public class DBUtil {
             //SQL을 실행하기 전에
             //트랜잭션을 수동으로 제어
 //            conn.setAutoCommit(false);
-
-
-
             return conn;
+
         }catch (Exception e){
             e.printStackTrace();
         }
