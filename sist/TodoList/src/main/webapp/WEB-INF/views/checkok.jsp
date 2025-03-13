@@ -1,28 +1,38 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 2025-03-12
-  Time: 오후 4:05
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <title>Title</title>
-    <link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
-    <style>
-
-    </style>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
+	<style>
+		
+	</style>
 </head>
 <body>
-
-
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-        crossorigin="anonymous"></script>
-<script src="https://bit.ly/4cMuheh"></script>
-<script>
-
-</script>
+	<!-- checkok.jsp -->
+	
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://bit.ly/4cMuheh"></script>
+	<script>
+	
+		<c:if test="${result == 1}">
+		location.href = '/todo/main.do';
+		</c:if>
+		
+		<c:if test="${result == 0}">
+		alert('failed');
+		history.back();
+		</c:if>
+		
+	</script>
 </body>
 </html>
+
+
+
+
+
 
