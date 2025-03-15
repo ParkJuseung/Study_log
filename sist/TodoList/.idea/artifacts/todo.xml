@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="todo">
+    <output-path>$PROJECT_DIR$/classes/artifacts/todo</output-path>
+    <root id="root" />
+  </artifact>
+</component>
