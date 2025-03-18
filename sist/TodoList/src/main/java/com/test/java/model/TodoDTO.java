@@ -10,18 +10,9 @@ import lombok.ToString;
 @Setter
 @ToString
 public class TodoDTO {
-	
-	private String seq;
-	private String todo;
-	private String state;
-	private String regdate;
 
+    private String seq;
+    private String todo;
+    private String state;
+    private String regdate;
 }
-
-
-
-
-
-
-
-

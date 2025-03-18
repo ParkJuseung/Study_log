@@ -1,7 +1,6 @@
 package com.test.java;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,29 +9,39 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.test.java.model.TodoDAO;
-import com.test.java.model.TodoDTO;
 
-@WebServlet("/main.do")
-public class Main extends HttpServlet {
-    
+@WebServlet("/delok.do")
+public class DelOk extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //Main.java
-        
-        //1. DB 작업 > select
-        //2. 결과 > 전달 > 출력(JSP)
+        //DelOk.java
+        //1. 데이터 가져오기(seq)
+        //2. DB 작업 > delete
+        //3. 호출하기
         
         //1.
-        TodoDAO dao = new TodoDAO();
-        
-        ArrayList<TodoDTO> list = dao.list();
+        String seq = req.getParameter("seq");
         
         //2.
-        //결과 = dao.list();
-        req.setAttribute("list", list);
+        TodoDAO dao = new TodoDAO();
+        int result = dao.del(seq);
         
-        req.getRequestDispatcher("WEB-INF/views/main.jsp").forward(req, resp);
-        
+        //3.
+        req.setAttribute("result", result);
+        req.getRequestDispatcher("/WEB-INF/views/delok.jsp").forward(req, resp);
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
