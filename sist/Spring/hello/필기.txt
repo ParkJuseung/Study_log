@@ -1,0 +1,69 @@
+## 스프링 프레임워크 구성 요소 (주요 기술)
+1. POJO 기반
+2. 의존성 주입 기반(DI) ***
+3. 관점 지향 프로그래밍 지원(AOP) ***
+4. Spring MVC
+5. 레이아웃 지원(Tiles)
+6. 데이터베이스 연동 (MyBatis)
+7. Spring Security
+8. 기타 등등
+
+
+### 스프링에서 가장 중요한 것 
+1. Ioc, DI
+2. AOP
+3. 스프링 컨테이너 
+
+
+
+### Spring MVC Project 구조 
+1. src/main/java	
+	- 여태까지 사용하는 JAVA 소스 폴더
+	- 패키지 or 파일 
+2. src/main/resouces
+	- Java 소스 파일 이외의 나머지 자원을 관리하는 폴더
+	- 스프링 관련된 여러가지 설정 파일들을 보관하는 용도 
+	
+3. src/test/java
+	-
+
+4. src/test/resource
+	- 단위 테스트용도
+	
+5. JRE System Library
+	- JRE 라이브러리 
+
+6. Maven Dpendencies
+	- 빌드 도구 (Maven or Gradle)
+	- 프로젝트 생성 or 라이브러리 관리 or 빌드 or 배포 
+	- 수업에서는 라이브러리 관리하는 용도 
+7. src 
+	7.1 webapp
+	- 웹 루트 폴더
+	- 브라우저로 직접 접근 가능한 최상위 폴더 ( 톰캣 구조 )
+	7.2 webapp -> resources
+	- CSS, Javascript 이미지 등 정적 자원을 관맇나ㅡㄴ 폴더
+	- 이전 수업 > asset 폴더 역할
+	- 강제력 (x) , 권장 (o)
+	7.3 webapp -> WEB-INF
+		classes 
+		- 컴파일된 클래스 파일 저장 폴더 
+		- 개발자 관여 x
+		spring ( *** )
+		- 스프링 관련 대부분의 설정 
+			appServelt > servlet - context.xml
+				- 스프링 설정 파일
+			root-context.xml
+				- 스프링 설정 파일
+		views
+			- 뷰 페이지 저장 폴더 
+		web.xml
+			- 톰캣 설정 파일 
+			
+			
+8. pom.xml
+ - Project object Model
+ - Maven 설정 파일 
+ - Lombok 설정 -> lombok.jar 참조
+ - 
+  
