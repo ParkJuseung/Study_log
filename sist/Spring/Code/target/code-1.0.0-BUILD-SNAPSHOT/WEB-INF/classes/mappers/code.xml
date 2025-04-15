@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="code">
+	
+	<!-- mappers > code.xml -->
+	<select id="time" resultType="String">
+		select sysdate from dual
+	</select>
+
+	<select id="clist" resultType="ldto">
+		select * from tblLanguage
+	</select>
+
+<!--	//parameterType은 생략 가능
+	//resultType은 생략 불가-->
+	<insert id="add" parameterType="cdto">
+		insert into tblCode (seq, subject, code, regdate, language)
+			values (seqCode.nextVal, #{subject}, #{code}, default, #{language})
+	</insert>
+
+
+
+
+
+	<resultMap id="categoryMap" type="ldto">
+		<id column="name" property="name" />
+		<result column="icon" property="icon" />
+		<result column="color" property="color" />
+	</resultMap>
+
+	<!--새로 추가한 DTO를 채우기 위해-->
+	<resultMap id="codeMap" type="cdto">
+		<id column="seq" property="seq" />
+		<result	column="subject" property="subject"/>
+		<result	column="code" property="code"/>
+		<result	column="regdate" property="regdate"/>
+		<result	column="language" property="language"/>
+		<association property="category" resultMap="categoryMap"/>
+	</resultMap>
+
+
+	<select id="list" resultMap="codeMap">
+		<!--서브 쿼리로 가져오기-->
+<!--		select
+			tblCode.*,
+			(select icon from tblLanguage where name = tblCode.language) as icon,
+			(select color from tblLanguage where name = tblCode.language) as color
+				from tblCode
+					order by seq desc-->
+
+		<!-- 조인으로 가져오기 -->
+		select *
+			from tblCode c
+				inner join tblLanguage l
+					on c.language = l.name
+						order by c.seq desc
+	</select>
+
+	<select id="view" parameterType="String" resultMap="codeMap">
+		select *
+			from tblCode c
+				inner join tblLanguage l
+					on c.language = l.name
+						where c.seq = #{seq}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+

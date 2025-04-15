@@ -76,7 +76,8 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-
+		log4j.xml
+		log4jdbc.log4j2.properties
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
