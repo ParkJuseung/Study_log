@@ -23,6 +23,10 @@ public class AddressDAO {
 		return template.selectList("rest.m5");
 	}
 
+    public AddressDTO m6() {
+
+		return template.selectOne("rest.m6");
+    }
 }
 
 

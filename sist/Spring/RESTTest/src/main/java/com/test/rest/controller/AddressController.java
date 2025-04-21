@@ -65,6 +65,13 @@ public class AddressController {
 		return dao.m5();
 	}
 
+	//4.
+	@GetMapping(value="/m6.do")
+	public AddressDTO m6(){
+
+		return dao.m6();
+	}
+
 }
 
 
