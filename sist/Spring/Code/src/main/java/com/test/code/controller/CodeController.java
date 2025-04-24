@@ -72,7 +72,6 @@ public class CodeController {
 		CodeDTO dto = dao.view(seq);
 
 		model.addAttribute("dto", dto);
-
 		return "view";
 	}
 
