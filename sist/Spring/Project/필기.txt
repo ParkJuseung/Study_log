@@ -142,7 +142,39 @@
 - SQL 구현
 - 오라클 기준
 	- 11g 이전: rownum 
-	- 12c 이후: rownum or row limiting(fetch rows)
+	- 12c 이후: rownum or row liimiting(fetch rows)
+
+
+## 댓글
+- tblComment
+- BoardController.java(X)
+- BoardMapper.java
+- com.test.project.model > "CommentDTO.java"
+- com.test.project.rest > "RestBoardController.java"
+
+- Project > "project.http"
+
+- 게시물 삭제 + 댓글 처리?
+	1. 게시물 삭제 + 댓글 삭제
+	2. 댓글 달린 게시물은 삭제 불가능
+	
+
+## 태그(Tagging)
+- 게시물에 대한 키워드
+- 왜? 검색 > 태그명 == 관리되는 검색어
+
+- com.test.project.model > "TagDTO.java"
+                         > "TaggingDTO.java"
+                         
+
+
+## 관리자
+- com.test.project.controller > "AdminController.java"
+- com.test.project.mapper > "AdminMapper.java"(I)
+- resources > com.test.project.mapper > "AdminMapper.xml"
+- views > admin > "admin.jsp"
+
+
 
 
 

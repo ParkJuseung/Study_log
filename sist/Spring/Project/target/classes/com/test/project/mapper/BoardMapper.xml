@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.test.project.mapper.BoardMapper">
+	
+	<!-- int add(BoardDTO dto); -->
+	<insert id="add" parameterType="bdto">
+		insert into tblBoard (seq, subject, content, regdate, readcount, id) values (seqBoard.nextVal, #{subject}, #{content}, default, default, #{id})
+	</insert>
+	
+	<!-- List<BoardDTO> list(HashMap<String, String> map); -->
+	<select id="list" resultType="bdto" parameterType="map">
+		
+		
+		select * from 
+			(select * from vwBoard
+				<if test='search == "y"'>
+				where ${column} like '%' || #{word} || '%'
+				</if>
+			)
+			offset #{offset} rows fetch next #{pageSize} rows only
+		
+		
+	</select>
+	
+	<!-- BoardDTO view(String seq); -->
+	<select id="view" parameterType="String" resultType="bdto">
+		select
+			tblBoard.*,
+			(select name from tblMember where id = tblBoard.id) as name
+		from tblBoard
+			where seq = #{seq}
+	</select>
+	
+	<!-- void addReadcount(String seq); -->
+	<update id="addReadcount" parameterType="String">
+		update tblBoard set
+			readcount = readcount + 1
+				where seq = #{seq}
+	</update>	
+	
+	<!-- int edit(BoardDTO bdto); -->
+	<update id="edit" parameterType="bdto">
+		update tblBoard set
+			subject = #{subject},
+			content = #{content}
+				where seq = #{seq}
+	</update>
+	
+	<!-- int del(BoardDTO bdto); -->
+	<delete id="del" parameterType="bdto">
+		delete from tblBoard
+			where seq = #{seq}
+	</delete>
+	
+	<!-- int getTotalCount(HashMap<String, String> map); -->
+	<select id="getTotalCount" parameterType="map" resultType="Integer">
+		select count(*) from tblBoard
+			<if test='search == "y"'>
+			where ${column} like '%' || #{word} || '%'
+			</if>
+	</select>
+	
+	<!-- List<CommentDTO> clist(CommentDTO cdto); -->
+	<select id="clist" parameterType="cdto" resultType="cdto">
+		select * from tblComment
+			where bseq = #{bseq}
+	</select>
+	
+	<!-- CommentDTO cget(String seq); -->
+	<select id="cget" parameterType="String" resultType="cdto">
+		select * from tblComment
+			where seq = #{seq}
+	</select>
+	
+	<!-- void cadd(CommentDTO dto); -->
+	<insert id="cadd" parameterType="cdto">
+	
+		<selectKey order="BEFORE" keyProperty="seq" resultType="String">
+			select 
+				seqComment.nextVal
+			from dual
+		</selectKey>
+			
+		insert into tblComment (seq, content, regdate, id, bseq)
+		values (#{seq}, #{content}, default, #{id}, #{bseq})
+	</insert>
+	
+	<!-- int cedit(CommentDTO cdto); -->
+	<update id="cedit" parameterType="cdto">
+		update tblComment set
+			content = #{content}
+				where seq = #{seq}
+	</update>
+
+	<!-- int cdel(String seq); -->
+	<delete id="cdel" parameterType="String">
+		delete from tblComment 
+			where seq = #{seq}
+	</delete>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
