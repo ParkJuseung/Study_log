@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
+    <style>
+
+    </style>
+</head>
+<body>
+<!--  -->
+<h1>연산자</h1>
+<!--
+타임리프 상수(리터럴) 표현
+- String : 'hong', 'test', '100'
+- Number : 10, 123, 3.14
+- Boolean : true, false
+- Null : null
+
+타임리프 연산자
+- 산술 연산자 : 자바와 동일
+-->
+
+<div>
+    10 + 3 = 13
+</div>
+
+<div th:text="${'10 + 3 = 13'}"></div>
+<div th:text="${a + '+' +  b +  '=' + (a+b)}"></div>
+<div th:text="${a} + '+' + ${b} + ' = ' + ${a+b}"></div>
+
+<div th:text="${a} + ${b} + '=' + ${a+b}"></div>
+
+<hr>
+
+<div th:text="${a} > 0 ? '양수' : '양수아님'"></div>
+<div th:text="${a} > 0 ? '양수' "></div>
+<div th:text="${a} < 0 ? '양수' "></div>
+<div th:text="${a} > 0 ?: '양수'"></div>
+<div th:text="${a} < 0 ?: '양수'"></div>
+
+<div th:text="${name}? ${name} : '익명'"></div>
+<div th:text="${name}?: '익명'"></div>
+
+<!-- 엘비스 연산자 ?: -->
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://bit.ly/4cMuheh"></script>
+<script>
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
