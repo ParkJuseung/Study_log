@@ -105,7 +105,6 @@ public class TestController {
         List<String> names= mapper.names();
         List<AddressDTO> list = mapper.list();
 
-
         model.addAttribute("count", 1);
         model.addAttribute("name", "주승");
         model.addAttribute("dto", dto);
@@ -153,5 +152,42 @@ public class TestController {
 
 
         return "m7";
+    }
+
+    @GetMapping("/m8")
+    public String m8(Model model) {
+
+        int seq = 10;
+        String mode = "add";
+
+        List<String> names= mapper.names();
+        List<AddressDTO> list = mapper.list();
+
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("search", "y");
+        map.put("column", "content");
+        map.put("word", "자바");
+
+        model.addAttribute("seq", seq);
+        model.addAttribute("mode", mode);
+        model.addAttribute("map", map);
+
+        model.addAttribute("names", names);
+        model.addAttribute("list", list);
+
+        return "m8";
+    }
+
+    @GetMapping("/m9")
+    public String m9(Model model) {
+
+        return "m9";
+    }
+
+
+    @GetMapping("/m10")
+    public String m10(Model model) {
+
+        return "m10";
     }
 }
