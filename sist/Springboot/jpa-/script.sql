@@ -247,6 +247,8 @@ select * from tblAddress;
 select * from tblInfo;
 select * from tblMemo;
 
+commit;
+
 
 select * from tabs;
 
